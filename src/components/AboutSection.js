@@ -25,7 +25,10 @@ const AboutSection = () => {
         <button>Contact Us</button>
       </div>
       <div className="image">
-        <img src={home1} alt="guy with a camera" />
+        <img
+          src={home1}
+          alt="black and white portrait of a man looking at the viewport of a camera with deep concentration"
+        />
       </div>
     </div>
   );
