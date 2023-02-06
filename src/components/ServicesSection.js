@@ -7,7 +7,7 @@ import teamwork from "../images/teamwork.svg";
 import home2 from "../images/home2.png";
 // Import styles
 import styled from "styled-components";
-import { Section, Description, Image, Hide } from "../styles";
+import { Section, Description, Image } from "../styles";
 
 const ServicesSection = () => {
   return (
@@ -48,10 +48,7 @@ const ServicesSection = () => {
         </Cards>
       </Description>
       <Image>
-        <img
-          src={home2}
-          alt="black and white high quality image of a camera on a tripod"
-        />
+        <img src={home2} alt="camera on a tripod" />
       </Image>
     </Services>
   );
