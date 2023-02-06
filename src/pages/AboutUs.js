@@ -1,8 +1,8 @@
 import React from "react";
 //Page components
-import AboutSection from "../components/AboutSection";
-import ServicesSection from "../components/ServicesSection";
-import FaqSection from "../components/FaqSection";
+import AboutSection from "../components/aboutSection";
+import ServicesSection from "../components/servicesSection";
+import FaqSection from "../components/faqSection";
 
 const AboutUs = () => {
   return (
