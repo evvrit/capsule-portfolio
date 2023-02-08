@@ -2,6 +2,9 @@ import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { useLocation } from "react-router-dom";
 import { movieState } from "../movieState";
+// Animations
+import { motion } from "framer-motion";
+import { pageAnim } from "../animation";
 
 const Movie = () => {
   const url = useLocation();
@@ -12,13 +15,18 @@ const Movie = () => {
     const currentMovie = movies.filter(
       (stateMovie) => stateMovie.url === url.pathname
     );
-    setMovie(currentMovie[0]);
+    if (currentMovie[0]) setMovie(currentMovie[0]);
   }, [movies, url]);
 
   return (
     <>
       {movie && (
-        <StyledMovie>
+        <StyledMovie
+          variants={pageAnim}
+          initial="hidden"
+          animate="show"
+          exit="exit"
+        >
           <Banner>
             <h2>{movie.title}</h2>
             <img src={movie.mainImg} alt={movie.mainImgAlt} />
@@ -42,7 +50,7 @@ const Movie = () => {
   );
 };
 
-const StyledMovie = styled.div`
+const StyledMovie = styled(motion.div)`
   color: white;
 `;
 

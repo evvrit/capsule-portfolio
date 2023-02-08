@@ -1,38 +1,46 @@
 import React from "react";
+// Images
 import home1 from "../images/home1.png";
-// Styled
-// import styled from "styled-components";
+// Components
+import Wave from "./Wave";
 import { Section, Description, Image, Hide } from "../styles";
+// Animations
+import { motion } from "framer-motion";
+import { titleAnim, fade, photoAnim } from "../animation";
 
 const AboutSection = () => {
   return (
     <Section>
       <Description>
-        <div className="title">
+        <motion.div className="title">
           <Hide>
-            <h2>We work to make</h2>
+            <motion.h2 variants={titleAnim}>We work to make</motion.h2>
           </Hide>
           <Hide>
-            <h2>
+            <motion.h2 variants={titleAnim}>
               your <span>dreams</span> come
-            </h2>
+            </motion.h2>
           </Hide>
           <Hide>
-            <h2>true.</h2>
+            <motion.h2 variants={titleAnim}>true.</motion.h2>
           </Hide>
-        </div>
-        <p>
+        </motion.div>
+        <motion.p variants={fade}>
           Contact us for any photography or videography ideas that you have. We
           have professionals with amazing skills.
-        </p>
-        <button>Contact Us</button>
+        </motion.p>
+        <motion.button variants={fade}>Contact Us</motion.button>
       </Description>
       <Image>
-        <img
+        <motion.img
+          variants={photoAnim}
+          initial="hidden"
+          animate="show"
           src={home1}
-          alt="black and white portrait of a man looking at the viewport of a camera with deep concentration"
+          alt="a man looking at a camera with deep concentration"
         />
       </Image>
+      <Wave />
     </Section>
   );
 };
