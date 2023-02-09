@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 // Icons
 import clock from "../images/clock.svg";
 import diaphragm from "../images/diaphragm.svg";
@@ -8,10 +8,21 @@ import home2 from "../images/home2.png";
 // Import styles
 import styled from "styled-components";
 import { Section, Description, Image } from "../styles";
+// Animations
+import { useInView } from "framer-motion";
 
 const ServicesSection = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { amount: "some" });
+
   return (
-    <Services>
+    <Services
+      ref={ref}
+      style={{
+        opacity: isInView ? 1 : 0,
+        transition: "all 0.8s ease",
+      }}
+    >
       <Description>
         <h2>
           High <span>quality</span> service

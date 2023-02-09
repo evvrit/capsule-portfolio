@@ -1,15 +1,23 @@
-import React from "react";
+import React, { useRef } from "react";
 // Styles
 import styled from "styled-components";
 import { Section } from "../styles";
 import Toggle from "./Toggle";
 // Animations
-import { motion, AnimateSharedLayout } from "framer-motion";
+import { motion, AnimateSharedLayout, useInView } from "framer-motion";
 import { fade } from "../animation";
 
 const FaqSection = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { amount: "some" });
   return (
-    <Faq>
+    <Faq
+      ref={ref}
+      style={{
+        opacity: isInView ? 1 : 0,
+        transition: "all 0.8s ease",
+      }}
+    >
       <h2>
         Any questions? <span>FAQ</span>
       </h2>
