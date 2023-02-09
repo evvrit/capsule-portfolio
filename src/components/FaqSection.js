@@ -6,7 +6,7 @@ import Toggle from "./Toggle";
 // Animations
 import { motion } from "framer-motion";
 import UseScroll from "./UseScroll";
-import { fade } from "../animation";
+import { fade, scrollReveal } from "../animation";
 
 const FaqSection = () => {
   return (

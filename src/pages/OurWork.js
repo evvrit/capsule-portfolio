@@ -15,6 +15,7 @@ import {
   slider,
   sliderContainer,
 } from "../animation";
+import UseScroll from "../components/UseScroll";
 
 const OurWork = () => {
   return (
@@ -26,29 +27,35 @@ const OurWork = () => {
         <Frame4 variants={slider}></Frame4>
       </motion.div>
       <h1>Our Work</h1>
-      <Movie>
-        <motion.h2 variants={fade}>The Athlete</motion.h2>
-        <motion.div variants={lineAnim} className="line"></motion.div>
-        <Link to="/work/the-athlete">
-          <Hide>
-            <motion.img variants={photoAnim} src={athlete} alt="athlete" />
-          </Hide>
-        </Link>
-      </Movie>
-      <Movie>
-        <h2>The Racer</h2>
-        <div className="line"></div>
-        <Link to="/work/the-racer">
-          <img src={theracer} alt="the racer" />
-        </Link>
-      </Movie>
-      <Movie>
-        <h2>Good Times</h2>
-        <div className="line"></div>
-        <Link to="/work/good-times">
-          <img src={goodtimes} alt="good times" />
-        </Link>
-      </Movie>
+      <UseScroll>
+        <Movie>
+          <motion.h2 variants={fade}>The Athlete</motion.h2>
+          <motion.div variants={lineAnim} className="line"></motion.div>
+          <Link to="/work/the-athlete">
+            <Hide>
+              <motion.img variants={photoAnim} src={athlete} alt="athlete" />
+            </Hide>
+          </Link>
+        </Movie>
+      </UseScroll>
+      <UseScroll>
+        <Movie>
+          <h2>The Racer</h2>
+          <motion.div variants={lineAnim} className="line"></motion.div>
+          <Link to="/work/the-racer">
+            <img src={theracer} alt="the racer" />
+          </Link>
+        </Movie>
+      </UseScroll>
+      <UseScroll>
+        <Movie>
+          <h2>Good Times</h2>
+          <motion.div variants={lineAnim} className="line"></motion.div>
+          <Link to="/work/good-times">
+            <img src={goodtimes} alt="good times" />
+          </Link>
+        </Movie>
+      </UseScroll>
     </Work>
   );
 };
@@ -64,7 +71,7 @@ const Work = styled(motion.div)`
   }
 `;
 
-const Movie = styled.div`
+const Movie = styled(motion.div)`
   padding-bottom: 10rem;
   .line {
     height: 0.5rem;

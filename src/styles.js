@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 
 export const Section = styled(motion.div)`
-  min-height: 90vhexport;
+  min-height: 90vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
