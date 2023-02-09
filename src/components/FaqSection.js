@@ -2,6 +2,10 @@ import React from "react";
 // Styles
 import styled from "styled-components";
 import { Section } from "../styles";
+import Toggle from "./Toggle";
+// Animations
+import { motion, AnimateSharedLayout } from "framer-motion";
+import { fade } from "../animation";
 
 const FaqSection = () => {
   return (
@@ -9,50 +13,44 @@ const FaqSection = () => {
       <h2>
         Any questions? <span>FAQ</span>
       </h2>
-      <div className="question">
-        <h4>How do I start?</h4>
-        <div className="answer">
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta,
-            cum.
-          </p>
-        </div>
-        <div className="faq-line"></div>
-      </div>
-      <div className="question">
-        <h4>Daily Schedule</h4>
-        <div className="answer">
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta,
-            cum.
-          </p>
-        </div>
-        <div className="faq-line"></div>
-      </div>
-      <div className="question">
-        <h4>Payment methods</h4>
-        <div className="answer">
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta,
-            cum.
-          </p>
-        </div>
-        <div className="faq-line"></div>
-      </div>
-      <div className="question">
-        <h4>What products do you offer?</h4>
-        <div className="answer">
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta,
-            cum.
-          </p>
-        </div>
-        <div className="faq-line"></div>
-      </div>
+      <AnimateSharedLayout>
+        <Toggle title="How do I start?">
+          <div className="answer">
+            <motion.p variants={fade}>Lorem ipsum dolor sit amet.</motion.p>
+            <motion.p variants={fade}>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta,
+              cum.
+            </motion.p>
+          </div>
+        </Toggle>
+        <Toggle title="Daily Schedule">
+          <div className="answer">
+            <motion.p variants={fade}>Lorem ipsum dolor sit amet.</motion.p>
+            <motion.p variants={fade}>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta,
+              cum.
+            </motion.p>
+          </div>
+        </Toggle>
+        <Toggle title="Payment method">
+          <div className="answer">
+            <motion.p variants={fade}>Lorem ipsum dolor sit amet.</motion.p>
+            <motion.p variants={fade}>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta,
+              cum.
+            </motion.p>
+          </div>
+        </Toggle>
+        <Toggle title="What products do you offer?">
+          <div className="answer">
+            <motion.p variants={fade}>Lorem ipsum dolor sit amet.</motion.p>
+            <motion.p variants={fade}>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta,
+              cum.
+            </motion.p>
+          </div>
+        </Toggle>
+      </AnimateSharedLayout>
     </Faq>
   );
 };
