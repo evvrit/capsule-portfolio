@@ -36,13 +36,6 @@ const ServicesSection = () => {
             </Card>
             <Card>
               <div className="icon">
-                <img src={diaphragm} alt="diaphragm" />
-                <h3>Diaphragm</h3>
-              </div>
-              <p>Lorem ipsum dolor sit amet.</p>
-            </Card>
-            <Card>
-              <div className="icon">
                 <img src={money} alt="money" />
                 <h3>Affordable</h3>
               </div>
@@ -71,6 +64,9 @@ const Services = styled(Section)`
 const Cards = styled.div`
   display: flex;
   flex-wrap: wrap;
+  @media (max-width: 1300px) {
+    justify-content: space-around;
+  }
 `;
 
 const Card = styled.div`
@@ -78,6 +74,11 @@ const Card = styled.div`
   .icon {
     display: flex;
     align-items: center;
+    img {
+      @media (max-width: 1300px) {
+        scale: 0.6;
+      }
+    }
     h3 {
       margin-left: 1rem;
       color: black;

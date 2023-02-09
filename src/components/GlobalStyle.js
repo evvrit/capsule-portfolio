@@ -13,6 +13,12 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Inter', sans-serif;
   }
 
+  html{
+    @media(max-width: 1700px) {
+      font-size: 80%;
+    }
+  }
+
   button{
     font-weight: bold;
     font-size: 1.1rem;
