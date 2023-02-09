@@ -7,25 +7,12 @@ import theracer from "../images/theracer-small.png";
 import goodtimes from "../images/goodtimes-small.png";
 // Animations
 import { motion } from "framer-motion";
-import {
-  pageAnim,
-  fade,
-  photoAnim,
-  lineAnim,
-  slider,
-  sliderContainer,
-} from "../animation";
+import { pageAnim, fade, photoAnim, lineAnim } from "../animation";
 import UseScroll from "../components/UseScroll";
 
 const OurWork = () => {
   return (
     <Work variants={pageAnim} initial="hidden" animate="show" exit="exit">
-      <motion.div variants={sliderContainer}>
-        <Frame1 variants={slider}></Frame1>
-        <Frame2 variants={slider}></Frame2>
-        <Frame3 variants={slider}></Frame3>
-        <Frame4 variants={slider}></Frame4>
-      </motion.div>
       <h1>Our Work</h1>
       <UseScroll>
         <Movie>
@@ -87,27 +74,6 @@ const Movie = styled(motion.div)`
 
 const Hide = styled.div`
   overflow: hidden;
-`;
-
-// Frame Animations
-const Frame1 = styled(motion.div)`
-  position: fixed;
-  top: 10%;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background: #fffebf;
-  z-index: 2;
-`;
-
-const Frame2 = styled(Frame1)`
-  background: #ff8ebf;
-`;
-const Frame3 = styled(Frame1)`
-  background: #8ed2ff;
-`;
-const Frame4 = styled(Frame1)`
-  background: #8effa0;
 `;
 
 export default OurWork;

@@ -10,12 +10,12 @@ export const pageAnim = {
       staggerChildren: 0.25,
     },
   },
-  exit: { opacity: 0, transition: { duration: 0.5 } },
+  exit: { opacity: 0, transition: { duration: 0.1 } },
 };
 
 export const titleAnim = {
   hidden: { y: 200 },
-  show: { y: 0, transition: { duration: 0.75, ease: "easeOut" } },
+  show: { y: 0, transition: { duration: 0.5, ease: "easeOut" } },
 };
 
 export const fade = {
@@ -35,15 +35,6 @@ export const photoAnim = {
 export const lineAnim = {
   hidden: { width: "0%" },
   show: { width: "100%", transition: { duration: 1 } },
-};
-
-export const slider = {
-  hidden: { x: "-130%", skew: "45deg" },
-  show: {
-    x: "100%",
-    skew: "0deg",
-    transition: { ease: "easeOut", duration: 1 },
-  },
 };
 
 export const sliderContainer = {

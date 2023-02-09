@@ -17,7 +17,7 @@ function App() {
     <div className="App">
       <GlobalStyle />
       <Nav />
-      <AnimatePresence mode="wait">
+      <AnimatePresence mode="wait" onExitComplete={() => window.scrollTo(0, 0)}>
         <Routes key={location.pathname} location={location}>
           <Route exact path="/" element={<AboutUs />} />
           <Route exact path="/work" element={<OurWork />} />
