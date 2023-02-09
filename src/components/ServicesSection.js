@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 // Icons
 import clock from "../images/clock.svg";
 import diaphragm from "../images/diaphragm.svg";
@@ -9,59 +9,52 @@ import home2 from "../images/home2.png";
 import styled from "styled-components";
 import { Section, Description, Image } from "../styles";
 // Animations
-import { useInView } from "framer-motion";
+import UseScroll from "./UseScroll";
 
 const ServicesSection = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { amount: "some" });
-
   return (
-    <Services
-      ref={ref}
-      style={{
-        opacity: isInView ? 1 : 0,
-        transition: "all 0.8s ease",
-      }}
-    >
-      <Description>
-        <h2>
-          High <span>quality</span> service
-        </h2>
-        <Cards>
-          <Card>
-            <div className="icon">
-              <img src={clock} alt="clock" />
-              <h3>Efficient</h3>
-            </div>
-            <p>Lorem ipsum dolor sit amet.</p>
-          </Card>
-          <Card>
-            <div className="icon">
-              <img src={teamwork} alt="teamwork" />
-              <h3>Teamwork</h3>
-            </div>
-            <p>Lorem ipsum dolor sit amet.</p>
-          </Card>
-          <Card>
-            <div className="icon">
-              <img src={diaphragm} alt="diaphragm" />
-              <h3>Diaphragm</h3>
-            </div>
-            <p>Lorem ipsum dolor sit amet.</p>
-          </Card>
-          <Card>
-            <div className="icon">
-              <img src={money} alt="money" />
-              <h3>Affordable</h3>
-            </div>
-            <p>Lorem ipsum dolor sit amet.</p>
-          </Card>
-        </Cards>
-      </Description>
-      <Image>
-        <img src={home2} alt="camera on a tripod" />
-      </Image>
-    </Services>
+    <UseScroll>
+      <Services>
+        <Description>
+          <h2>
+            High <span>quality</span> service
+          </h2>
+          <Cards>
+            <Card>
+              <div className="icon">
+                <img src={clock} alt="clock" />
+                <h3>Efficient</h3>
+              </div>
+              <p>Lorem ipsum dolor sit amet.</p>
+            </Card>
+            <Card>
+              <div className="icon">
+                <img src={teamwork} alt="teamwork" />
+                <h3>Teamwork</h3>
+              </div>
+              <p>Lorem ipsum dolor sit amet.</p>
+            </Card>
+            <Card>
+              <div className="icon">
+                <img src={diaphragm} alt="diaphragm" />
+                <h3>Diaphragm</h3>
+              </div>
+              <p>Lorem ipsum dolor sit amet.</p>
+            </Card>
+            <Card>
+              <div className="icon">
+                <img src={money} alt="money" />
+                <h3>Affordable</h3>
+              </div>
+              <p>Lorem ipsum dolor sit amet.</p>
+            </Card>
+          </Cards>
+        </Description>
+        <Image>
+          <img src={home2} alt="camera on a tripod" />
+        </Image>
+      </Services>
+    </UseScroll>
   );
 };
 

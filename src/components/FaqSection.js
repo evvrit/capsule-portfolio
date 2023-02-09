@@ -1,27 +1,20 @@
-import React, { useRef } from "react";
+import React from "react";
 // Styles
 import styled from "styled-components";
 import { Section } from "../styles";
 import Toggle from "./Toggle";
 // Animations
-import { motion, AnimateSharedLayout, useInView } from "framer-motion";
+import { motion } from "framer-motion";
+import UseScroll from "./UseScroll";
 import { fade } from "../animation";
 
 const FaqSection = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { amount: "some" });
   return (
-    <Faq
-      ref={ref}
-      style={{
-        opacity: isInView ? 1 : 0,
-        transition: "all 0.8s ease",
-      }}
-    >
-      <h2>
-        Any questions? <span>FAQ</span>
-      </h2>
-      <AnimateSharedLayout>
+    <UseScroll>
+      <Faq>
+        <h2>
+          Any questions? <span>FAQ</span>
+        </h2>
         <Toggle title="How do I start?">
           <div className="answer">
             <motion.p variants={fade}>Lorem ipsum dolor sit amet.</motion.p>
@@ -58,8 +51,8 @@ const FaqSection = () => {
             </motion.p>
           </div>
         </Toggle>
-      </AnimateSharedLayout>
-    </Faq>
+      </Faq>
+    </UseScroll>
   );
 };
 
