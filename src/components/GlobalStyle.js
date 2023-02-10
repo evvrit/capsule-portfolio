@@ -63,5 +63,9 @@ const GlobalStyle = createGlobalStyle`
   a{
     font-size: 1.1rem;
   }
+
+  svg{
+    font-size: 3rem;
+  }
 `;
 export default GlobalStyle;

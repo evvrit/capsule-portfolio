@@ -14,7 +14,7 @@ const Nav = () => {
       </h1>
       <ul>
         <li>
-          <Link to="/">1. About Us</Link>
+          <Link to="/">1. About</Link>
           <Line
             transition={{ duration: 0.75 }}
             initial={{ width: "0%" }}
@@ -22,7 +22,7 @@ const Nav = () => {
           />
         </li>
         <li>
-          <Link to="/work">2. Our Work</Link>
+          <Link to="/work">2. My Work</Link>
           <Line
             transition={{ duration: 0.75 }}
             initial={{ width: "0%" }}
@@ -30,7 +30,7 @@ const Nav = () => {
           />
         </li>
         <li>
-          <Link to="/contact">3. Contact Us</Link>
+          <Link to="/contact">3. Contact Me</Link>
           <Line
             transition={{ duration: 0.75 }}
             initial={{ width: "0%" }}

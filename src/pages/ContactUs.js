@@ -4,6 +4,9 @@ import styled from "styled-components";
 // Animations
 import { motion } from "framer-motion";
 import { pageAnim, titleAnim } from "../animation";
+import email from "../images/email.svg";
+import linkedin from "../images/linkedin.svg";
+import github from "../images/github.svg";
 
 const Contact = () => {
   return (
@@ -21,19 +24,31 @@ const Contact = () => {
       </Title>
       <Hide>
         <Social variants={titleAnim}>
-          <StyledIcon></StyledIcon>
+          <Tooltip>email copied to clipboard</Tooltip>
+          <StyledIcon
+            src={email}
+            alt="email"
+            style={{ width: "3.6rem", margin: "0.2rem" }}
+            onClick={() => {
+              navigator.clipboard.writeText("turpin.elyse@gmail.com");
+            }}
+          ></StyledIcon>
           <h4>Send Me A Message</h4>
         </Social>
       </Hide>
       <Hide>
         <Social variants={titleAnim}>
-          <StyledIcon></StyledIcon>
+          <a href="https://www.linkedin.com/in/elyse-turpin/">
+            <StyledIcon src={linkedin} alt="linkedin" />
+          </a>
           <h4>Connect on LinkedIn</h4>
         </Social>
       </Hide>
       <Hide>
         <Social variants={titleAnim}>
-          <StyledIcon></StyledIcon>
+          <a href="https://github.com/evvrit">
+            <StyledIcon src={github} alt="github" />
+          </a>
           <h4>Follow Along on Github</h4>
         </Social>
       </Hide>
@@ -66,15 +81,31 @@ const Social = styled(motion.div)`
   display: flex;
   align-items: center;
   width: 100%;
+  position: relative;
   h4 {
     margin: 2rem;
   }
 `;
 
-const StyledIcon = styled.div`
-  border-radius: 50%;
-  width: 3rem;
-  height: 3rem;
-  background: #353535;
+const StyledIcon = styled.img`
+  width: 4rem;
+  height: 4rem;
+  cursor: pointer;
+  &:hover {
+    scale: 90%;
+    transition: all 0.2s ease;
+  }
+  &: hover .sc-liQGml gmHMi {
+    visibility: visible;
+  }
 `;
+
+const Tooltip = styled.span`
+  position: absolute;
+  visibility: hidden;
+  z-index: 1;
+  color: black;
+  top: 0;
+`;
+
 export default Contact;

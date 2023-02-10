@@ -1,7 +1,6 @@
 import React from "react";
 // Icons
 import clock from "../images/clock.svg";
-import diaphragm from "../images/diaphragm.svg";
 import money from "../images/money.svg";
 import teamwork from "../images/teamwork.svg";
 import home2 from "../images/home2.png";
