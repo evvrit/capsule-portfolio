@@ -1,14 +1,29 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 //Styles
 import styled from "styled-components";
 // Animations
 import { motion } from "framer-motion";
-import { pageAnim, titleAnim } from "../animation";
+import { fade, pageAnim, titleAnim } from "../animation";
 import email from "../images/email.svg";
 import linkedin from "../images/linkedin.svg";
 import github from "../images/github.svg";
+// Icons
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faClipboardCheck } from "@fortawesome/free-solid-svg-icons";
 
 const Contact = () => {
+  const [clicked, setClicked] = useState(false);
+
+  const copyToClipboardHandler = () => {
+    const copiedTooltip = document.getElementById("tooltip");
+    copiedTooltip.style.opacity = 1;
+    navigator.clipboard.writeText("turpin.elyse@gmail.com");
+
+    setTimeout(() => {
+      copiedTooltip.style.opacity = 0;
+    }, "1000");
+  };
+
   return (
     <StyledContact
       variants={pageAnim}
@@ -24,16 +39,28 @@ const Contact = () => {
       </Title>
       <Hide>
         <Social variants={titleAnim}>
-          <Tooltip>email copied to clipboard</Tooltip>
+          <Tooltip id="tooltip">
+            <FontAwesomeIcon
+              icon={faClipboardCheck}
+              style={{
+                fontSize: "1.5rem",
+                color: "#222222",
+                paddingRight: "0.2rem",
+              }}
+            />
+            copied!
+          </Tooltip>
           <StyledIcon
             src={email}
             alt="email"
-            style={{ width: "3.6rem", margin: "0.2rem" }}
-            onClick={() => {
-              navigator.clipboard.writeText("turpin.elyse@gmail.com");
+            style={{
+              width: "3.6rem",
+              margin: "0.2rem",
             }}
+            id="email"
+            onClick={() => copyToClipboardHandler()}
           ></StyledIcon>
-          <h4>Send Me A Message</h4>
+          <h4>Send Me An Email</h4>
         </Social>
       </Hide>
       <Hide>
@@ -87,7 +114,7 @@ const Social = styled(motion.div)`
   }
 `;
 
-const StyledIcon = styled.img`
+const StyledIcon = styled(motion.img)`
   width: 4rem;
   height: 4rem;
   cursor: pointer;
@@ -95,17 +122,16 @@ const StyledIcon = styled.img`
     scale: 90%;
     transition: all 0.2s ease;
   }
-  &: hover .sc-liQGml gmHMi {
-    visibility: visible;
-  }
 `;
 
-const Tooltip = styled.span`
+const Tooltip = styled(motion.span)`
+  color: #222222;
   position: absolute;
-  visibility: hidden;
-  z-index: 1;
-  color: black;
+  opacity: 0;
   top: 0;
+  left: 0;
+  z-index: 1;
+  padding: 0rem 0.4rem;
 `;
 
 export default Contact;
