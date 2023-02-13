@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 // Images
-import athlete from "../images/athlete-small.png";
+import foragr1 from "../images/forag-rcollage2.png";
 import theracer from "../images/theracer-small.png";
 import goodtimes from "../images/goodtimes-small.png";
 // Animations
@@ -13,14 +13,18 @@ import UseScroll from "../components/UseScroll";
 const OurWork = () => {
   return (
     <Work variants={pageAnim} initial="hidden" animate="show" exit="exit">
-      <h1>Our Work</h1>
+      <h1>Projects</h1>
       <UseScroll>
         <Movie>
-          <motion.h2 variants={fade}>The Athlete</motion.h2>
+          <motion.h2 variants={fade}>Foragr</motion.h2>
           <motion.div variants={lineAnim} className="line"></motion.div>
-          <Link to="/work/the-athlete">
+          <Link to="/work/foragr">
             <Hide>
-              <motion.img variants={photoAnim} src={athlete} alt="athlete" />
+              <motion.img
+                variants={photoAnim}
+                src={foragr1}
+                alt="foragr screenshots"
+              />
             </Hide>
           </Link>
         </Movie>
