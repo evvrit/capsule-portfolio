@@ -40,11 +40,25 @@ export const Image = styled.div`
   z-index: 2;
   img {
     width: 100%;
-    height: 80vh;
+    height: 90vh;
     object-fit: cover;
   }
 `;
 
 export const Hide = styled.div`
   overflow: hidden;
+`;
+
+export const Button = styled.a`
+  padding: 1rem;
+  text-decoration: none;
+  color: black;
+  background-color: white;
+  opacity: 0.8;
+  border-radius: 1rem;
+  font-size: 1.6rem;
+  transition: opacity 0.5s ease;
+  &:hover {
+    opacity: 1;
+  }
 `;

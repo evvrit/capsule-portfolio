@@ -19,7 +19,7 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
-  button{
+  .button{
     font-weight: bold;
     font-size: 1.1rem;
     cursor: pointer;
@@ -27,7 +27,7 @@ const GlobalStyle = createGlobalStyle`
     border: 3px solid #23d997;
     background: transparent;
     color: white;
-    transition:L all 0.5s ease;
+    transition: all 0.5s ease;
     &:hover{
       background-color: #23d997;
       color: white;
@@ -62,10 +62,13 @@ const GlobalStyle = createGlobalStyle`
 
   a{
     font-size: 1.1rem;
+    text-decoration: none;
+    color: white;
   }
 
   svg{
     font-size: 3rem;
+    color: #23d997;
   }
 `;
 export default GlobalStyle;

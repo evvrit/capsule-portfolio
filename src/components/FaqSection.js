@@ -1,53 +1,59 @@
 import React from "react";
 // Styles
 import styled from "styled-components";
-import { Section } from "../styles";
+import { Section, Button } from "../styles";
 import Toggle from "./Toggle";
 // Animations
 import { motion } from "framer-motion";
 import UseScroll from "./UseScroll";
-import { fade, scrollReveal } from "../animation";
+import { fade } from "../animation";
 
 const FaqSection = () => {
   return (
     <UseScroll>
       <Faq>
         <h2>
-          Any questions? <span>FAQ</span>
+          Any questions? <span>Learn more</span>
         </h2>
-        <Toggle title="How do I start?">
+        <Toggle title="My CV">
           <div className="answer">
-            <motion.p variants={fade}>Lorem ipsum dolor sit amet.</motion.p>
-            <motion.p variants={fade}>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta,
-              cum.
-            </motion.p>
+            <motion.div variants={fade}>
+              <Button
+                href="https://drive.google.com/file/d/1PNSuXYQiDNkRkgfR_mVX3A_g5mk7oy_H/view?usp=sharing"
+                target="_blank"
+              >
+                English
+              </Button>
+              <Button
+                href="https://drive.google.com/file/d/1rKkvF4BsEM5btNMLOBAAMaVCToMi3c1n/view?usp=sharing"
+                target="_blank"
+              >
+                Français
+              </Button>
+            </motion.div>
           </div>
         </Toggle>
-        <Toggle title="Daily Schedule">
+        <Toggle title="Currently working on">
           <div className="answer">
-            <motion.p variants={fade}>Lorem ipsum dolor sit amet.</motion.p>
             <motion.p variants={fade}>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta,
-              cum.
+              Building a study tracker for better long-term recall
+              <span>Reps: timing is everything</span>
             </motion.p>
-          </div>
-        </Toggle>
-        <Toggle title="Payment method">
-          <div className="answer">
-            <motion.p variants={fade}>Lorem ipsum dolor sit amet.</motion.p>
             <motion.p variants={fade}>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta,
-              cum.
+              Diving deeper into fundamentals with{" "}
+              <div style={{ display: "flex" }}>
+                <span>the Harvard CS50x CS Fundamentals course</span>
+                <a href="https://www.edx.org/course/introduction-computer-science-harvardx-cs50x">
+                  >>
+                </a>
+              </div>
             </motion.p>
-          </div>
-        </Toggle>
-        <Toggle title="What products do you offer?">
-          <div className="answer">
-            <motion.p variants={fade}>Lorem ipsum dolor sit amet.</motion.p>
             <motion.p variants={fade}>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta,
-              cum.
+              Getting to know the library that shook front-end up with{" "}
+              <div style={{ display: "flex" }}>
+                <span>the Creative React & Redux course</span>
+                <a href="https://developedbyed.com/courses/1203573">>></a>
+              </div>
             </motion.p>
           </div>
         </Toggle>
@@ -72,9 +78,9 @@ const Faq = styled(Section)`
     cursor: pointer;
   }
   .answer {
-    padding: 2rem 0rem;
-    p {
-      padding: 1rem 0rem;
+    padding: 3rem 3rem 3rem 0rem;
+    a {
+      margin-left: 1rem;
     }
   }
   h2 {

@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 //Styles
 import styled from "styled-components";
 // Animations
 import { motion } from "framer-motion";
-import { fade, pageAnim, titleAnim } from "../animation";
+import { pageAnim, titleAnim } from "../animation";
 import email from "../images/email.svg";
 import linkedin from "../images/linkedin.svg";
 import github from "../images/github.svg";
@@ -12,8 +12,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClipboardCheck } from "@fortawesome/free-solid-svg-icons";
 
 const Contact = () => {
-  const [clicked, setClicked] = useState(false);
-
   const copyToClipboardHandler = () => {
     const copiedTooltip = document.getElementById("tooltip");
     copiedTooltip.style.opacity = 1;
