@@ -1,4 +1,4 @@
-import athlete from "./images/athlete-small.png";
+import foragr from "./images/foragr.png";
 import theracer from "./images/theracer-small.png";
 import goodtimes from "./images/goodtimes-small.png";
 import athlete2 from "./images/athlete2.png";
@@ -9,11 +9,11 @@ export const movieState = () => {
   return [
     {
       title: "The Athlete",
-      mainImg: athlete,
+      mainImg: goodtimes,
       mainImgAlt: "boxer taking a rest",
       secondaryImg: athlete2,
       secondaryImgAlt: "shirtless boxers recovering",
-      url: "/work/the-athlete",
+      url: "/work/waves",
       awards: [
         {
           title: "Truly A Masterpiece",
@@ -37,7 +37,7 @@ export const movieState = () => {
       mainImg: goodtimes,
       mainImgAlt:
         "couple embracing under a pine tree, boats in the water behind them",
-      url: "/work/good-times",
+      url: "/work/melisandeyoga",
       secondaryImg: goodtimes2,
       secondaryImgAlt: "couple playfully embracing in a hay field in autumn",
       awards: [
@@ -59,10 +59,11 @@ export const movieState = () => {
       ],
     },
     {
-      title: "The Racer",
-      mainImg: theracer,
-      mainImgAlt: "young woman leaning on her yellow racecar looking off",
-      url: "/work/the-racer",
+      title: "Foragr",
+      mainImg: foragr,
+      mainImgAlt:
+        "landing page with a woodsy background and invitation to begin",
+      url: "/work/foragr",
       secondaryImg: theracer2,
       secondaryImgAlt:
         "motorcyclist speeding along under arena lights, past dawn",
