@@ -43,7 +43,10 @@ const FaqSection = () => {
               Diving deeper into fundamentals with{" "}
               <div style={{ display: "flex" }}>
                 <span>the Harvard CS50x CS Fundamentals course</span>
-                <a href="https://www.edx.org/course/introduction-computer-science-harvardx-cs50x">
+                <a
+                  target="_blank"
+                  href="https://www.edx.org/course/introduction-computer-science-harvardx-cs50x"
+                >
                   >>
                 </a>
               </div>
@@ -52,7 +55,12 @@ const FaqSection = () => {
               Getting to know the library that shook front-end up with{" "}
               <div style={{ display: "flex" }}>
                 <span>the Creative React & Redux course</span>
-                <a href="https://developedbyed.com/courses/1203573">>></a>
+                <a
+                  target="_blank"
+                  href="https://developedbyed.com/courses/1203573"
+                >
+                  >>
+                </a>
               </div>
             </motion.p>
           </div>
