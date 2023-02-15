@@ -1,5 +1,9 @@
-import foragr from "./images/foragr.png";
-import theracer from "./images/theracer-small.png";
+import foragrcollage1 from "./images/foragr-collage.png";
+import foragrcollage2 from "./images/foragr-collage2.png";
+import waves1 from "./images/waves1.png";
+import wavescollage from "./images/waves-collage.png";
+import melisande1 from "./images/melisande1.png";
+import melisande2 from "./images/melisande2.png";
 import goodtimes from "./images/goodtimes-small.png";
 import athlete2 from "./images/athlete2.png";
 import theracer2 from "./images/the-racer2.jpg";
@@ -8,51 +12,50 @@ import goodtimes2 from "./images/good-times2.jpg";
 export const movieState = () => {
   return [
     {
-      title: "The Athlete",
-      mainImg: goodtimes,
-      mainImgAlt: "boxer taking a rest",
-      secondaryImg: athlete2,
-      secondaryImgAlt: "shirtless boxers recovering",
+      title: "Waves",
+      mainImg: waves1,
+      mainImgAlt: "simple desktop view of miminalist music player",
+      secondaryImg: wavescollage,
+      secondaryImgAlt: "mobile view of minimalist music player",
       url: "/work/waves",
       awards: [
         {
-          title: "Truly A Masterpiece",
+          title: "Challenges",
           description:
             "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
         },
         {
-          title: "Fresh look on a brutal sport.",
+          title: "Successes",
           description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
         },
         {
-          title: "It’s okay lmao.",
+          title: "Next",
           description:
             "“Lorem Ipsum is simply dummy text of the printing and typesetting industry.”",
         },
       ],
     },
     {
-      title: "Good Times",
-      mainImg: goodtimes,
-      mainImgAlt:
-        "couple embracing under a pine tree, boats in the water behind them",
+      title: "Melisande Yoga",
+      mainImg: melisande2,
+      mainImgAlt: "types of yoga classes",
       url: "/work/melisandeyoga",
-      secondaryImg: goodtimes2,
-      secondaryImgAlt: "couple playfully embracing in a hay field in autumn",
+      secondaryImg: melisande1,
+      secondaryImgAlt: "private classes booking info",
       awards: [
         {
-          title: "Truly A masterpiece",
+          title: "Challenges",
           description:
             "“Lorem Ipsum is simply dummy text of the printing and typesetting industry.”",
         },
         {
-          title: "Fresh look on a brutal sport.",
+          title: "Successes",
           description:
             "“Lorem Ipsum is simply dummy text of the printing and typesetting industry.”",
         },
         {
-          title: "It’s okay lmao.",
+          title: "Next",
           description:
             "“Lorem Ipsum is simply dummy text of the printing and typesetting industry.”",
         },
@@ -60,26 +63,26 @@ export const movieState = () => {
     },
     {
       title: "Foragr",
-      mainImg: foragr,
+      mainImg: foragrcollage1,
       mainImgAlt:
-        "landing page with a woodsy background and invitation to begin",
+        "mobile view series with full size map, cache details, and form to add a cache",
       url: "/work/foragr",
-      secondaryImg: theracer2,
+      secondaryImg: foragrcollage2,
       secondaryImgAlt:
-        "motorcyclist speeding along under arena lights, past dawn",
+        "mobile view series with landing page, profile, and species details",
       awards: [
         {
-          title: "Truly A masterpiece",
+          title: "Challenges",
           description:
             "“Lorem Ipsum is simply dummy text of the printing and typesetting industry.”",
         },
         {
-          title: "Fresh look on a brutal sport.",
+          title: "Successes",
           description:
             "“Lorem Ipsum is simply dummy text of the printing and typesetting industry.”",
         },
         {
-          title: "It’s okay lmao.",
+          title: "Next",
           description:
             "“Lorem Ipsum is simply dummy text of the printing and typesetting industry.”",
         },

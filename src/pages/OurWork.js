@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 // Images
 import foragr1 from "../images/foragr-collage.png";
-import waves1 from "../images/waves1.png";
+import waves3 from "../images/waves3.png";
 import melisande1 from "../images/melisande1.png";
 import goodtimes from "../images/goodtimes-small.png";
 // Animations
@@ -20,7 +20,7 @@ const OurWork = () => {
           <h2>Waves</h2>
           <motion.div variants={lineAnim} className="line"></motion.div>
           <Link to="/work/waves">
-            <img src={waves1} alt="waves screenshot" />
+            <img src={waves3} alt="waves screenshot" />
           </Link>
         </Project>
       </UseScroll>

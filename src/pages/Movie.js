@@ -52,6 +52,7 @@ const Movie = () => {
 
 const StyledMovie = styled(motion.div)`
   color: white;
+  margin: 5rem 10rem;
 `;
 
 const Banner = styled.div`
@@ -72,7 +73,7 @@ const Banner = styled.div`
 `;
 
 const ImageDisplay = styled.div`
-  min-height: 50vh;
+  min-height: 90vh;
   img {
     width: 100%;
     height: 100%;
