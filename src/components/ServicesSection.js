@@ -1,4 +1,5 @@
 import React from "react";
+import Card from "../components/TechnologyCard";
 // Icons
 import heroku from "../images/heroku.svg";
 import rails from "../images/rails.svg";
@@ -21,24 +22,29 @@ import { Section, Description } from "../styles";
 import UseScroll from "./UseScroll";
 
 const ServicesSection = () => {
+  const technologies = [
+    { icon: faReact, name: "React" },
+    { icon: faGit, name: "Git" },
+    { icon: faFigma, name: "Figma" },
+    { icon: faSass, name: "Sass" },
+    { icon: faJs, name: "Javascript" },
+    { icon: faSquareGithub, name: "Github" },
+    { icon: faWordpress, name: "Wordpress" },
+    { icon: faPython, name: "Python" },
+    { icon: faHtml5, name: "HTML5" },
+  ];
+
+  console.log(technologies[0]);
   return (
     <UseScroll>
       <Services>
         <Description>
           <h2>Tech stack</h2>
           <Cards>
-            <Card>
-              <div className="icon">
-                <img width="50" height="50" src={rails} alt="ruby on rails" />
-                <h3>Ruby on Rails</h3>
-              </div>
-            </Card>
-            <Card>
-              <div className="icon">
-                <FontAwesomeIcon icon={faReact} />
-                <h3>React</h3>
-              </div>
-            </Card>
+            {technologies.map((technology) => (
+              <Card icon={technology.icon} name={technology.name} />
+            ))}
+            ;
             <Card>
               <div className="icon">
                 <img width="34" height="34" src={heroku} alt="heroku" />
@@ -47,50 +53,8 @@ const ServicesSection = () => {
             </Card>
             <Card>
               <div className="icon">
-                <FontAwesomeIcon icon={faGit} />
-                <h3>Git</h3>
-              </div>
-            </Card>
-            <Card>
-              <div className="icon">
-                <FontAwesomeIcon icon={faFigma} />
-                <h3>Figma</h3>
-              </div>
-            </Card>
-            <Card>
-              <div className="icon">
-                <FontAwesomeIcon icon={faSass} />
-                <h3>SCSS</h3>
-              </div>
-            </Card>
-            <Card>
-              <div className="icon">
-                <FontAwesomeIcon icon={faJs} />
-                <h3>Javascript</h3>
-              </div>
-            </Card>
-            <Card>
-              <div className="icon">
-                <FontAwesomeIcon icon={faSquareGithub} />
-                <h3>Github</h3>
-              </div>
-            </Card>
-            <Card>
-              <div className="icon">
-                <FontAwesomeIcon icon={faWordpress} />
-                <h3>Wordpress</h3>
-              </div>
-            </Card>
-            <Card>
-              <div className="icon">
-                <FontAwesomeIcon icon={faPython} />
-                <h3>Python</h3>
-              </div>
-            </Card>
-            <Card>
-              <div className="icon">
-                <FontAwesomeIcon icon={faHtml5} />
-                <h3>HTML5</h3>
+                <img width="34" height="34" src={rails} alt="rails" />
+                <h3>Rails</h3>
               </div>
             </Card>
           </Cards>
@@ -117,34 +81,6 @@ const Cards = styled.div`
   justify-content: center;
   @media (max-width: 1300px) {
     justify-content: space-around;
-  }
-`;
-
-const Card = styled.div`
-  justify-content: center;
-  padding: 2rem;
-  margin: 0;
-  .icon {
-    flex-basis: 15rem;
-    display: flex;
-    align-items: center;
-    svg,
-    img {
-      color: #23d997;
-    }
-    h3 {
-      padding: 1rem;
-    }
-  }
-  @media (max-width: 1300px) {
-    padding: 1rem;
-    .icon {
-      flex-basis: 10rem;
-    }
-    svg,
-    img {
-      scale: 0.6;
-    }
   }
 `;
 

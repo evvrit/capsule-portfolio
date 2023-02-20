@@ -19,11 +19,11 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
-  .button{
+  button{
     font-weight: bold;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     cursor: pointer;
-    padding: 1rem 2rem;
+    padding: 1rem 3rem;
     border: 3px solid #23d997;
     background: transparent;
     color: white;

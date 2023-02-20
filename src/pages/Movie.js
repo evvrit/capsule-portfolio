@@ -5,6 +5,7 @@ import { movieState } from "../movieState";
 // Animations
 import { motion } from "framer-motion";
 import { pageAnim } from "../animation";
+import ServicesSection from "../components/ServicesSection";
 
 const Movie = () => {
   const url = useLocation();
@@ -40,9 +41,14 @@ const Movie = () => {
               />
             ))}
           </Awards>
+          <Buttons>
+            <button>View live project</button>
+            <button>Visit repository</button>
+          </Buttons>
           <ImageDisplay>
             <img src={movie.secondaryImg} alt={movie.secondaryImgAlt} />
           </ImageDisplay>
+          <ServicesSection></ServicesSection>
         </StyledMovie>
       )}
       ;
@@ -56,18 +62,15 @@ const StyledMovie = styled(motion.div)`
 `;
 
 const Banner = styled.div`
-  min-height: 90vh;
-  padding-top: 20vh;
+  min-height: 60vh;
+  padding-top: 0vh;
   position: relative;
   h2 {
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translate() (-50%, -10%);
+    margin-left: 5rem;
+    padding-bottom: 2rem;
   }
   img {
     width: 100%;
-    height: 70vh;
     object-fit: cover;
   }
 `;
@@ -83,8 +86,7 @@ const ImageDisplay = styled.div`
 
 const Awards = styled.div`
   min-height: 80vh;
-  display: flex;
-  margin: 5rem 10rem;
+  margin: 10rem 0rem;
   align-items: center;
   justify-content: space-around;
   @media (max-width: 1300px) {
@@ -106,6 +108,18 @@ const AwardStyle = styled.div`
   }
   p {
     padding: 2rem 0rem;
+  }
+`;
+
+const Buttons = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin: 6rem 10rem;
+  button {
+    margin: 1rem;
+    width: 80%;
   }
 `;
 

@@ -34,8 +34,8 @@ const AboutSection = () => {
           writing resilient code.
         </motion.p>
         <motion.div variants={fade}>
-          <Link to="/contact" class="button">
-            Contact
+          <Link to="/contact">
+            <button>Contact</button>
           </Link>
         </motion.div>
       </Description>

@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import foragr1 from "../images/foragr-collage.png";
 import waves3 from "../images/waves3.png";
 import melisande1 from "../images/melisande1.png";
-import goodtimes from "../images/goodtimes-small.png";
 // Animations
 import { motion } from "framer-motion";
 import { pageAnim, fade, photoAnim, lineAnim } from "../animation";
