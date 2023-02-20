@@ -6,6 +6,7 @@ import { brands } from "@fortawesome/fontawesome-svg-core/import.macro";
 import styled from "styled-components";
 
 const TechnologyCard = ({ icon, name }) => {
+  console.log(`from card: ${icon}`);
   return (
     <Card>
       <div className="icon">

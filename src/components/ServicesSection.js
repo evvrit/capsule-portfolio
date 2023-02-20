@@ -1,5 +1,5 @@
 import React from "react";
-import Card from "../components/TechnologyCard";
+import TechnologyCard from "../components/TechnologyCard";
 // Icons
 import heroku from "../images/heroku.svg";
 import rails from "../images/rails.svg";
@@ -23,7 +23,7 @@ import UseScroll from "./UseScroll";
 
 const ServicesSection = () => {
   const technologies = [
-    { icon: faReact, name: "React" },
+    { icon: ["fab", "react"], name: "React" },
     { icon: faGit, name: "Git" },
     { icon: faFigma, name: "Figma" },
     { icon: faSass, name: "Sass" },
@@ -34,7 +34,7 @@ const ServicesSection = () => {
     { icon: faHtml5, name: "HTML5" },
   ];
 
-  console.log(technologies[0]);
+  console.log(technologies[0].icon);
   return (
     <UseScroll>
       <Services>
@@ -42,21 +42,21 @@ const ServicesSection = () => {
           <h2>Tech stack</h2>
           <Cards>
             {technologies.map((technology) => (
-              <Card icon={technology.icon} name={technology.name} />
+              <TechnologyCard icon={technology.icon} name={technology.name} />
             ))}
             ;
-            <Card>
+            <TechnologyCard>
               <div className="icon">
                 <img width="34" height="34" src={heroku} alt="heroku" />
                 <h3>Heroku</h3>
               </div>
-            </Card>
-            <Card>
+            </TechnologyCard>
+            <TechnologyCard>
               <div className="icon">
                 <img width="34" height="34" src={rails} alt="rails" />
                 <h3>Rails</h3>
               </div>
-            </Card>
+            </TechnologyCard>
           </Cards>
         </Description>
       </Services>
