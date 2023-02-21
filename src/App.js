@@ -9,8 +9,33 @@ import Movie from "./pages/Movie";
 import { Routes, Route, useLocation } from "react-router-dom";
 // Animations
 import { AnimatePresence } from "framer-motion";
+// Icons
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fab } from "@fortawesome/free-brands-svg-icons";
+import {
+  faGit,
+  faSquareGithub,
+  faFigma,
+  faReact,
+  faSass,
+  faJs,
+  faPython,
+  faWordpress,
+  faHtml5,
+} from "@fortawesome/free-brands-svg-icons";
 
 function App() {
+  library.add(
+    faGit,
+    faSquareGithub,
+    faFigma,
+    faReact,
+    faSass,
+    faJs,
+    faPython,
+    faWordpress,
+    faHtml5
+  );
   const location = useLocation();
 
   return (

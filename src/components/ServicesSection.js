@@ -4,17 +4,6 @@ import TechnologyCard from "../components/TechnologyCard";
 import heroku from "../images/heroku.svg";
 import rails from "../images/rails.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faGit,
-  faSquareGithub,
-  faFigma,
-  faReact,
-  faSass,
-  faJs,
-  faPython,
-  faWordpress,
-  faHtml5,
-} from "@fortawesome/free-brands-svg-icons";
 // Import styles
 import styled from "styled-components";
 import { Section, Description } from "../styles";
@@ -23,15 +12,15 @@ import UseScroll from "./UseScroll";
 
 const ServicesSection = () => {
   const technologies = [
-    { icon: ["fab", "react"], name: "React" },
-    { icon: faGit, name: "Git" },
-    { icon: faFigma, name: "Figma" },
-    { icon: faSass, name: "Sass" },
-    { icon: faJs, name: "Javascript" },
-    { icon: faSquareGithub, name: "Github" },
-    { icon: faWordpress, name: "Wordpress" },
-    { icon: faPython, name: "Python" },
-    { icon: faHtml5, name: "HTML5" },
+    { icon: "react", name: "React" },
+    { icon: "git", name: "Git" },
+    { icon: "figma", name: "Figma" },
+    { icon: "sass", name: "Sass" },
+    { icon: "js", name: "Javascript" },
+    { icon: "github", name: "Github" },
+    { icon: "wordpress", name: "Wordpress" },
+    { icon: "python", name: "Python" },
+    { icon: "html5", name: "HTML5" },
   ];
 
   console.log(technologies[0].icon);
