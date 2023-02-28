@@ -1,39 +1,24 @@
 import React from "react";
-import TechnologyCard from "../components/TechnologyCard";
-// Icons
+import TechnologyCard from "./TechnologyCard";
+// SVGs
 import heroku from "../images/heroku.svg";
 import rails from "../images/rails.svg";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // Import styles
 import styled from "styled-components";
 import { Section, Description } from "../styles";
 // Animations
 import UseScroll from "./UseScroll";
 
-const ServicesSection = () => {
-  const technologies = [
-    { icon: "react", name: "React" },
-    { icon: "git", name: "Git" },
-    { icon: "figma", name: "Figma" },
-    { icon: "sass", name: "Sass" },
-    { icon: "js", name: "Javascript" },
-    { icon: "github", name: "Github" },
-    { icon: "wordpress", name: "Wordpress" },
-    { icon: "python", name: "Python" },
-    { icon: "html5", name: "HTML5" },
-  ];
-
-  console.log(technologies[0].icon);
+const StackSection = ({ technologies }) => {
   return (
     <UseScroll>
-      <Services>
+      <TechStack>
         <Description>
           <h2>Tech stack</h2>
           <Cards>
             {technologies.map((technology) => (
               <TechnologyCard icon={technology.icon} name={technology.name} />
             ))}
-            ;
             <TechnologyCard>
               <div className="icon">
                 <img width="34" height="34" src={heroku} alt="heroku" />
@@ -48,12 +33,12 @@ const ServicesSection = () => {
             </TechnologyCard>
           </Cards>
         </Description>
-      </Services>
+      </TechStack>
     </UseScroll>
   );
 };
 
-const Services = styled(Section)`
+const TechStack = styled(Section)`
   h2 {
     padding-bottom: 5rem;
     text-align: center;
@@ -73,4 +58,4 @@ const Cards = styled.div`
   }
 `;
 
-export default ServicesSection;
+export default StackSection;

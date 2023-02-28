@@ -5,7 +5,7 @@ import { movieState } from "../movieState";
 // Animations
 import { motion } from "framer-motion";
 import { pageAnim } from "../animation";
-import ServicesSection from "../components/ServicesSection";
+import StackSection from "../components/StackSection";
 
 const Movie = () => {
   const url = useLocation();
@@ -48,7 +48,7 @@ const Movie = () => {
           <ImageDisplay>
             <img src={movie.secondaryImg} alt={movie.secondaryImgAlt} />
           </ImageDisplay>
-          <ServicesSection></ServicesSection>
+          <StackSection technologies={technologies} />
         </StyledMovie>
       )}
       ;

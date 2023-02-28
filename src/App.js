@@ -12,32 +12,13 @@ import { AnimatePresence } from "framer-motion";
 // Icons
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
-import {
-  faGit,
-  faSquareGithub,
-  faFigma,
-  faReact,
-  faSass,
-  faJs,
-  faPython,
-  faWordpress,
-  faHtml5,
-} from "@fortawesome/free-brands-svg-icons";
 
 function App() {
-  library.add(
-    faGit,
-    faSquareGithub,
-    faFigma,
-    faReact,
-    faSass,
-    faJs,
-    faPython,
-    faWordpress,
-    faHtml5
-  );
-  const location = useLocation();
+  // icons library
+  library.add(fab);
 
+  // routing
+  const location = useLocation();
   return (
     <div className="App">
       <GlobalStyle />
