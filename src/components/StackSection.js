@@ -5,11 +5,11 @@ import heroku from "../images/heroku.svg";
 import rails from "../images/rails.svg";
 // Import styles
 import styled from "styled-components";
-import { Section, Description } from "../styles";
+import { Section, Description, Card } from "../styles";
 // Animations
 import UseScroll from "./UseScroll";
 
-const StackSection = ({ technologies }) => {
+const StackSection = ({ technologies, railsInclude, herokuInclude }) => {
   return (
     <UseScroll>
       <TechStack>
@@ -19,24 +19,33 @@ const StackSection = ({ technologies }) => {
             {technologies.map((technology) => (
               <TechnologyCard icon={technology.icon} name={technology.name} />
             ))}
-            <TechnologyCard>
-              <div className="icon">
-                <img width="34" height="34" src={heroku} alt="heroku" />
-                <h3>Heroku</h3>
-              </div>
-            </TechnologyCard>
-            <TechnologyCard>
-              <div className="icon">
-                <img width="34" height="34" src={rails} alt="rails" />
-                <h3>Rails</h3>
-              </div>
-            </TechnologyCard>
+            {railsInclude ? (
+              <Card>
+                <div className="icon">
+                  <img width="34" height="34" src={rails} alt="rails" />
+                  <h3>Rails</h3>
+                </div>
+              </Card>
+            ) : (
+              ""
+            )}
+            {herokuInclude ? (
+              <Card>
+                <div className="icon">
+                  <img width="34" height="34" src={heroku} alt="heroku" />
+                  <h3>Heroku</h3>
+                </div>
+              </Card>
+            ) : (
+              ""
+            )}
           </Cards>
         </Description>
       </TechStack>
     </UseScroll>
   );
 };
+export default StackSection;
 
 const TechStack = styled(Section)`
   h2 {
@@ -53,9 +62,4 @@ const Cards = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  @media (max-width: 1300px) {
-    justify-content: space-around;
-  }
 `;
-
-export default StackSection;

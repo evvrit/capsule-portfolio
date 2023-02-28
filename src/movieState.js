@@ -4,10 +4,6 @@ import waves1 from "./images/waves1.png";
 import wavescollage from "./images/waves-collage.png";
 import melisande1 from "./images/melisande1.png";
 import melisande2 from "./images/melisande2.png";
-import goodtimes from "./images/goodtimes-small.png";
-import athlete2 from "./images/athlete2.png";
-import theracer2 from "./images/the-racer2.jpg";
-import goodtimes2 from "./images/good-times2.jpg";
 
 export const movieState = () => {
   return [
@@ -18,6 +14,15 @@ export const movieState = () => {
       secondaryImg: wavescollage,
       secondaryImgAlt: "mobile view of minimalist music player",
       url: "/work/waves",
+      technologies: [
+        { icon: ["fab", "react"], name: "React" },
+        { icon: ["fab", "git"], name: "Git" },
+        { icon: ["fab", "sass"], name: "Sass" },
+        { icon: ["fab", "js"], name: "Javascript" },
+        { icon: ["fab", "github"], name: "Github" },
+        { icon: ["fab", "html5"], name: "HTML5" },
+      ],
+      herokuInclude: true,
       awards: [
         {
           title: "Challenges",
@@ -43,6 +48,11 @@ export const movieState = () => {
       url: "/work/melisandeyoga",
       secondaryImg: melisande1,
       secondaryImgAlt: "private classes booking info",
+      technologies: [
+        { icon: ["fab", "figma"], name: "Figma" },
+        { icon: ["fab", "wordpress"], name: "Wordpress" },
+        { icon: ["fab", "html5"], name: "HTML5" },
+      ],
       awards: [
         {
           title: "Challenges",
@@ -70,6 +80,16 @@ export const movieState = () => {
       secondaryImg: foragrcollage2,
       secondaryImgAlt:
         "mobile view series with landing page, profile, and species details",
+      technologies: [
+        { icon: ["fab", "git"], name: "Git" },
+        { icon: ["fab", "figma"], name: "Figma" },
+        { icon: ["fab", "sass"], name: "Sass" },
+        { icon: ["fab", "js"], name: "Javascript" },
+        { icon: ["fab", "github"], name: "Github" },
+        { icon: ["fab", "html5"], name: "HTML5" },
+      ],
+      railsInclude: true,
+      herokuInclude: true,
       awards: [
         {
           title: "Challenges",

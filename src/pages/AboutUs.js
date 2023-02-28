@@ -23,7 +23,11 @@ const AboutUs = () => {
   return (
     <motion.div variants={pageAnim} initial="hidden" animate="show">
       <AboutSection />
-      <StackSection technologies={technologies} />
+      <StackSection
+        technologies={technologies}
+        railsInclude={true}
+        herokuInclude={true}
+      />
       <FaqSection />
     </motion.div>
   );

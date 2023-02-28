@@ -16,7 +16,9 @@ const Movie = () => {
     const currentMovie = movies.filter(
       (stateMovie) => stateMovie.url === url.pathname
     );
-    if (currentMovie[0]) setMovie(currentMovie[0]);
+    if (currentMovie[0]) {
+      setMovie(currentMovie[0]);
+    }
   }, [movies, url]);
 
   return (
@@ -48,7 +50,11 @@ const Movie = () => {
           <ImageDisplay>
             <img src={movie.secondaryImg} alt={movie.secondaryImgAlt} />
           </ImageDisplay>
-          <StackSection technologies={technologies} />
+          <StackSection
+            technologies={movie.technologies}
+            railsInclude={movie.railsInclude}
+            herokuInclude={movie.herokuInclude}
+          />
         </StyledMovie>
       )}
       ;
