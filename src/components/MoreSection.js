@@ -21,12 +21,14 @@ const MoreSection = () => {
               <Button
                 href="https://drive.google.com/file/d/1PNSuXYQiDNkRkgfR_mVX3A_g5mk7oy_H/view?usp=sharing"
                 target="_blank"
+                rel="noreferrer"
               >
                 English
               </Button>
               <Button
                 href="https://drive.google.com/file/d/1rKkvF4BsEM5btNMLOBAAMaVCToMi3c1n/view?usp=sharing"
                 target="_blank"
+                rel="noreferrer"
               >
                 Français
               </Button>
@@ -37,7 +39,12 @@ const MoreSection = () => {
           <div className="answer">
             <motion.p variants={fade}>
               Building a study tracker for better long-term recall
-              <a target="_blank" href="#">
+              <a
+                style={{ cursor: "default" }}
+                target="_blank"
+                rel="noreferrer"
+                href="#"
+              >
                 <span>Reps: timing is everything</span>
               </a>
             </motion.p>
@@ -56,6 +63,7 @@ const MoreSection = () => {
               Getting to know the library that shook front-end
               <a
                 target="_blank"
+                rel="noreferrer"
                 href="https://developedbyed.com/courses/1203573"
               >
                 <span style={{ cursor: "pointer" }}>

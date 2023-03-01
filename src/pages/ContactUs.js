@@ -3,13 +3,9 @@ import React from "react";
 import styled from "styled-components";
 // Animations
 import { motion } from "framer-motion";
-import { pageAnim, titleAnim } from "../animation";
-import email from "../images/email.svg";
-import linkedin from "../images/linkedin.svg";
-import github from "../images/github.svg";
+import { pageAnim, titleAnim, lineAnim } from "../animation";
 // Icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faClipboardCheck } from "@fortawesome/free-solid-svg-icons";
 
 const Contact = () => {
   const copyToClipboardHandler = () => {
@@ -19,7 +15,7 @@ const Contact = () => {
 
     setTimeout(() => {
       copiedTooltip.style.opacity = 0;
-    }, "1000");
+    }, "2000");
   };
 
   return (
@@ -33,46 +29,32 @@ const Contact = () => {
       <Title>
         <Hide>
           <motion.h2 variants={titleAnim}>Get In Touch</motion.h2>
+          <motion.div variants={lineAnim} className="line"></motion.div>
         </Hide>
       </Title>
       <Hide>
-        <Social variants={titleAnim}>
-          <Tooltip id="tooltip">
-            <FontAwesomeIcon
-              icon={faClipboardCheck}
-              style={{
-                fontSize: "1.5rem",
-                color: "#222222",
-                paddingRight: "0.2rem",
-              }}
-            />
-            copied!
-          </Tooltip>
-          <StyledIcon
-            src={email}
-            alt="email"
-            style={{
-              width: "3.6rem",
-              margin: "0.2rem",
-            }}
-            id="email"
-            onClick={() => copyToClipboardHandler()}
-          ></StyledIcon>
+        <Social variants={titleAnim} onClick={() => copyToClipboardHandler()}>
+          <FontAwesomeIcon icon={["fas", "envelope"]} />
           <h4>Send Me An Email</h4>
+          <Tooltip id="tooltip">copied!</Tooltip>
         </Social>
       </Hide>
       <Hide>
         <Social variants={titleAnim}>
-          <a href="https://www.linkedin.com/in/elyse-turpin/">
-            <StyledIcon src={linkedin} alt="linkedin" />
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://www.linkedin.com/in/elyse-turpin/"
+          >
+            <FontAwesomeIcon icon={["fab", "linkedin"]} />
           </a>
           <h4>Connect on LinkedIn</h4>
         </Social>
       </Hide>
       <Hide>
         <Social variants={titleAnim}>
-          <a href="https://github.com/evvrit">
-            <StyledIcon src={github} alt="github" />
+          <a target="_blank" rel="noreferrer" href="https://github.com/evvrit">
+            <FontAwesomeIcon icon={["fab", "github"]} />
           </a>
           <h4>Follow Along on Github</h4>
         </Social>
@@ -91,10 +73,17 @@ const StyledContact = styled(motion.div)`
 `;
 
 const Title = styled.div`
-  margin-bottom: 4rem;
-  color: black;
+  h2 {
+    padding: 1rem 0rem;
+  }
+  color: #353535;
   @media (max-width: 1300px) {
     margin-top: 5rem;
+  }
+  .line {
+    height: 0.5rem;
+    background: #23dd97;
+    margin-bottom: 3rem;
   }
 `;
 
@@ -110,26 +99,30 @@ const Social = styled(motion.div)`
   h4 {
     margin: 2rem;
   }
-`;
-
-const StyledIcon = styled(motion.img)`
-  width: 4rem;
-  height: 4rem;
-  cursor: pointer;
-  &:hover {
-    scale: 90%;
-    transition: all 0.2s ease;
+  svg {
+    color: #353535;
+    width: 4rem;
+    height: 4rem;
+    cursor: pointer;
+    &:hover {
+      scale: 90%;
+      transition: all 0.2s ease;
+    }
   }
 `;
 
-const Tooltip = styled(motion.span)`
-  color: #222222;
+const Tooltip = styled(motion.div)`
+  font-size: 1.3rem;
+  transition: all 0.1s ease-out;
+  color: #353535;
   position: absolute;
   opacity: 0;
   top: 0;
   left: 0;
   z-index: 1;
-  padding: 0rem 0.4rem;
+  svg {
+    height: 1.6rem;
+  }
 `;
 
 export default Contact;

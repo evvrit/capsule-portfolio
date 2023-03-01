@@ -37,11 +37,11 @@ const Project = () => {
             <img src={project.mainImg} alt={project.mainImgAlt} />
           </Banner>
           <Buttons>
-            <a target="_blank" href={project.siteLink}>
+            <a target="_blank" rel="noreferrer" href={project.siteLink}>
               View live project
             </a>
             {project.repoLink && (
-              <a target="_blank" href={project.repoLink}>
+              <a target="_blank" rel="noreferrer" href={project.repoLink}>
                 Visit repository
               </a>
             )}
