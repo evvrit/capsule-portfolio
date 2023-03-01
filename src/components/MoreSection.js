@@ -37,31 +37,31 @@ const MoreSection = () => {
           <div className="answer">
             <motion.p variants={fade}>
               Building a study tracker for better long-term recall
-              <span>Reps: timing is everything</span>
+              <a target="_blank" href="#">
+                <span>Reps: timing is everything</span>
+              </a>
             </motion.p>
             <motion.p variants={fade}>
-              Mastering CS logic with{" "}
-              <div style={{ display: "flex" }}>
-                <span>the Harvard CS50x CS Fundamentals course</span>
-                <a
-                  target="_blank"
-                  href="https://www.edx.org/course/introduction-computer-science-harvardx-cs50x"
-                >
-                  >>
-                </a>
-              </div>
+              Mastering CS logic
+              <a
+                target="_blank"
+                href="https://www.edx.org/course/introduction-computer-science-harvardx-cs50x"
+              >
+                <span style={{ cursor: "pointer" }}>
+                  Harvard CS50x CS Fundamentals
+                </span>
+              </a>
             </motion.p>
             <motion.p variants={fade}>
               Getting to know the library that shook front-end
-              <div style={{ display: "flex" }}>
-                <span>the Creative React & Redux course</span>
-                <a
-                  target="_blank"
-                  href="https://developedbyed.com/courses/1203573"
-                >
-                  >>
-                </a>
-              </div>
+              <a
+                target="_blank"
+                href="https://developedbyed.com/courses/1203573"
+              >
+                <span style={{ cursor: "pointer" }}>
+                  DevEd's Creative React & Redux course
+                </span>
+              </a>
             </motion.p>
           </div>
         </Toggle>
@@ -86,6 +86,7 @@ const More = styled(Section)`
     cursor: pointer;
   }
   .answer {
+    cursor: default;
     padding: 3rem 3rem 3rem 0rem;
     a {
       margin-left: 1rem;
