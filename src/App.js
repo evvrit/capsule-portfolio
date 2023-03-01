@@ -3,7 +3,7 @@ import AboutUs from "./pages/AboutUs";
 import GlobalStyle from "./components/GlobalStyle";
 import Nav from "./components/Nav";
 import Contact from "./pages/ContactUs";
-import OurWork from "./pages/OurWork";
+import OurWork from "./pages/MyWork";
 import Project from "./pages/Project";
 // Router
 import { Routes, Route, useLocation } from "react-router-dom";
