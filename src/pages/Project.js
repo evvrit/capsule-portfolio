@@ -1,68 +1,68 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { useLocation } from "react-router-dom";
-import { movieState } from "../movieState";
+import { projectState } from "../projectState";
 // Animations
 import { motion } from "framer-motion";
 import { pageAnim } from "../animation";
 import StackSection from "../components/StackSection";
 
-const Movie = () => {
+const Project = () => {
   const url = useLocation();
-  const [movies, setMovies] = useState(movieState);
-  const [movie, setMovie] = useState(null);
+  const [projects, setProjects] = useState(projectState);
+  const [project, setProject] = useState(null);
 
   useEffect(() => {
-    const currentMovie = movies.filter(
-      (stateMovie) => stateMovie.url === url.pathname
+    const currentProject = projects.filter(
+      (stateProject) => stateProject.url === url.pathname
     );
-    if (currentMovie[0]) {
-      setMovie(currentMovie[0]);
+    if (currentProject[0]) {
+      setProject(currentProject[0]);
     }
-  }, [movies, url]);
+  }, [projects, url]);
 
   return (
     <>
-      {movie && (
-        <StyledMovie
+      {project && (
+        <StyledProject
           variants={pageAnim}
           initial="hidden"
           animate="show"
           exit="exit"
         >
           <Banner>
-            <h2>{movie.title}</h2>
-            <img src={movie.mainImg} alt={movie.mainImgAlt} />
+            <h2>{project.title}</h2>
+            <img src={project.mainImg} alt={project.mainImgAlt} />
           </Banner>
-          <Awards>
-            {movie.awards.map((award) => (
-              <Award
-                title={award.title}
-                description={award.description}
-                key={award.title}
+          <Details>
+            {project.details.map((detail) => (
+              <Detail
+                title={detail.title}
+                description={detail.description}
+                key={detail.title}
               />
             ))}
-          </Awards>
+          </Details>
           <Buttons>
             <button>View live project</button>
             <button>Visit repository</button>
           </Buttons>
           <ImageDisplay>
-            <img src={movie.secondaryImg} alt={movie.secondaryImgAlt} />
+            <img src={project.secondaryImg} alt={project.secondaryImgAlt} />
           </ImageDisplay>
           <StackSection
-            technologies={movie.technologies}
-            railsInclude={movie.railsInclude}
-            herokuInclude={movie.herokuInclude}
+            technologies={project.technologies}
+            railsInclude={project.railsInclude}
+            herokuInclude={project.herokuInclude}
           />
-        </StyledMovie>
+        </StyledProject>
       )}
       ;
     </>
   );
 };
 
-const StyledMovie = styled(motion.div)`
+const StyledProject = styled(motion.div)`
   color: white;
   margin: 5rem 10rem;
 `;
@@ -90,7 +90,7 @@ const ImageDisplay = styled.div`
   }
 `;
 
-const Awards = styled.div`
+const Details = styled.div`
   min-height: 80vh;
   margin: 10rem 0rem;
   align-items: center;
@@ -101,7 +101,7 @@ const Awards = styled.div`
   }
 `;
 
-const AwardStyle = styled.div`
+const DetailStyle = styled.div`
   padding: 5rem;
   h3 {
     font-size: 2rem;
@@ -131,14 +131,14 @@ const Buttons = styled.div`
 
 // Award Component
 
-const Award = ({ title, description }) => {
+const Detail = ({ title, description }) => {
   return (
-    <AwardStyle>
+    <DetailStyle>
       <h3>{title}</h3>
       <div className="line"></div>
       <p>{description}</p>
-    </AwardStyle>
+    </DetailStyle>
   );
 };
 
-export default Movie;
+export default Project;

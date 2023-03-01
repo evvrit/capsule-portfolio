@@ -5,7 +5,7 @@ import wavescollage from "./images/waves-collage.png";
 import melisande1 from "./images/melisande1.png";
 import melisande2 from "./images/melisande2.png";
 
-export const movieState = () => {
+export const projectState = () => {
   return [
     {
       title: "Waves",
@@ -23,7 +23,7 @@ export const movieState = () => {
         { icon: ["fab", "html5"], name: "HTML5" },
       ],
       herokuInclude: true,
-      awards: [
+      details: [
         {
           title: "Challenges",
           description:
@@ -52,8 +52,9 @@ export const movieState = () => {
         { icon: ["fab", "figma"], name: "Figma" },
         { icon: ["fab", "wordpress"], name: "Wordpress" },
         { icon: ["fab", "html5"], name: "HTML5" },
+        { icon: ["fab", "elementor"], name: "Elementor" },
       ],
-      awards: [
+      details: [
         {
           title: "Challenges",
           description:
@@ -90,7 +91,7 @@ export const movieState = () => {
       ],
       railsInclude: true,
       herokuInclude: true,
-      awards: [
+      details: [
         {
           title: "Challenges",
           description:

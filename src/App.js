@@ -4,7 +4,7 @@ import GlobalStyle from "./components/GlobalStyle";
 import Nav from "./components/Nav";
 import Contact from "./pages/ContactUs";
 import OurWork from "./pages/OurWork";
-import Movie from "./pages/Movie";
+import Project from "./pages/Project";
 // Router
 import { Routes, Route, useLocation } from "react-router-dom";
 // Animations
@@ -27,7 +27,7 @@ function App() {
         <Routes key={location.pathname} location={location}>
           <Route exact path="/" element={<AboutUs />} />
           <Route exact path="/work" element={<OurWork />} />
-          <Route exact path="/work/:id" element={<Movie />} />
+          <Route exact path="/work/:id" element={<Project />} />
           <Route exact path="/contact" element={<Contact />} />
         </Routes>
       </AnimatePresence>
