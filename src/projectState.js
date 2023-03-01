@@ -29,17 +29,17 @@ export const projectState = () => {
         {
           title: "Challenges",
           description:
-            "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+            "Avoiding redundant state variables, working with outdated information",
         },
         {
           title: "Successes",
           description:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+            "Implemented autoplay and skip-track features, added pretty style touches while keeping the design sleek",
         },
         {
           title: "Next",
           description:
-            "“Lorem Ipsum is simply dummy text of the printing and typesetting industry.”",
+            "Incorporating more song libraries with option to select genre",
         },
       ],
     },
@@ -61,17 +61,17 @@ export const projectState = () => {
         {
           title: "Challenges",
           description:
-            "“Lorem Ipsum is simply dummy text of the printing and typesetting industry.”",
+            "Communicating technical concepts to the client, adapting to changing client vision",
         },
         {
           title: "Successes",
           description:
-            "“Lorem Ipsum is simply dummy text of the printing and typesetting industry.”",
+            "Improved the user experience and increased user engagement with the client's online platform",
         },
         {
           title: "Next",
           description:
-            "“Lorem Ipsum is simply dummy text of the printing and typesetting industry.”",
+            "Refine the UI with more consistent design, replace arketa video library management with a custom-built system",
         },
       ],
     },
@@ -100,17 +100,17 @@ export const projectState = () => {
         {
           title: "Challenges",
           description:
-            "“Lorem Ipsum is simply dummy text of the printing and typesetting industry.”",
+            "Creating a drop-pin feature on the map that would work for a mock-mobile demo, working with others under a time crunch",
         },
         {
           title: "Successes",
           description:
-            "“Lorem Ipsum is simply dummy text of the printing and typesetting industry.”",
+            "A fairly complex multi-model bookmarking feature with dynamic rendering, a mobile-responsive design",
         },
         {
           title: "Next",
           description:
-            "“Lorem Ipsum is simply dummy text of the printing and typesetting industry.”",
+            "Optimising performance, eliminating empty space, and adding fun cross-user interactivity features!",
         },
       ],
     },

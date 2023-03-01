@@ -36,15 +36,6 @@ const Project = () => {
             <h2>{project.title}</h2>
             <img src={project.mainImg} alt={project.mainImgAlt} />
           </Banner>
-          <Details>
-            {project.details.map((detail) => (
-              <Detail
-                title={detail.title}
-                description={detail.description}
-                key={detail.title}
-              />
-            ))}
-          </Details>
           <Buttons>
             <a target="_blank" href={project.siteLink}>
               View live project
@@ -55,14 +46,23 @@ const Project = () => {
               </a>
             )}
           </Buttons>
-          <ImageDisplay>
-            <img src={project.secondaryImg} alt={project.secondaryImgAlt} />
-          </ImageDisplay>
           <StackSection
             technologies={project.technologies}
             railsInclude={project.railsInclude}
             herokuInclude={project.herokuInclude}
           />
+          <ImageDisplay>
+            <img src={project.secondaryImg} alt={project.secondaryImgAlt} />
+          </ImageDisplay>
+          <Details>
+            {project.details.map((detail) => (
+              <Detail
+                title={detail.title}
+                description={detail.description}
+                key={detail.title}
+              />
+            ))}
+          </Details>
         </StyledProject>
       )}
       ;
@@ -129,7 +129,7 @@ const Buttons = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 6rem 10rem;
+  margin: 10rem 10rem 4rem;
   a {
     justify-content: space-around;
     text-align: center;
