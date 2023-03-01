@@ -8,12 +8,12 @@ import { motion } from "framer-motion";
 import UseScroll from "./UseScroll";
 import { fade } from "../animation";
 
-const FaqSection = () => {
+const MoreSection = () => {
   return (
     <UseScroll>
-      <Faq>
+      <More>
         <h2>
-          Any questions? <span>Learn more</span>
+          <span>Dive deeper</span>
         </h2>
         <Toggle title="My CV">
           <div className="answer">
@@ -40,7 +40,7 @@ const FaqSection = () => {
               <span>Reps: timing is everything</span>
             </motion.p>
             <motion.p variants={fade}>
-              Diving deeper into fundamentals with{" "}
+              Mastering CS logic with{" "}
               <div style={{ display: "flex" }}>
                 <span>the Harvard CS50x CS Fundamentals course</span>
                 <a
@@ -52,7 +52,7 @@ const FaqSection = () => {
               </div>
             </motion.p>
             <motion.p variants={fade}>
-              Getting to know the library that shook front-end up with{" "}
+              Getting to know the library that shook front-end
               <div style={{ display: "flex" }}>
                 <span>the Creative React & Redux course</span>
                 <a
@@ -65,17 +65,17 @@ const FaqSection = () => {
             </motion.p>
           </div>
         </Toggle>
-      </Faq>
+      </More>
     </UseScroll>
   );
 };
 
-const Faq = styled(Section)`
+const More = styled(Section)`
   display: block;
   span {
     display: block;
   }
-  .faq-line {
+  .bookend-line {
     background: #cccccc;
     height: 0.2rem;
     margin: 2rem 0rem;
@@ -97,4 +97,4 @@ const Faq = styled(Section)`
   }
 `;
 
-export default FaqSection;
+export default MoreSection;

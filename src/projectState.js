@@ -14,6 +14,8 @@ export const projectState = () => {
       secondaryImg: wavescollage,
       secondaryImgAlt: "mobile view of minimalist music player",
       url: "/work/waves",
+      repoLink: "https://github.com/evvrit/music-player",
+      siteLink: "https://waveywaves.herokuapp.com/",
       technologies: [
         { icon: ["fab", "react"], name: "React" },
         { icon: ["fab", "git"], name: "Git" },
@@ -48,6 +50,7 @@ export const projectState = () => {
       url: "/work/melisandeyoga",
       secondaryImg: melisande1,
       secondaryImgAlt: "private classes booking info",
+      siteLink: "https://melisandeyoga.ca/",
       technologies: [
         { icon: ["fab", "figma"], name: "Figma" },
         { icon: ["fab", "wordpress"], name: "Wordpress" },
@@ -81,6 +84,8 @@ export const projectState = () => {
       secondaryImg: foragrcollage2,
       secondaryImgAlt:
         "mobile view series with landing page, profile, and species details",
+      siteLink: "https://forag-r.herokuapp.com/",
+      repoLink: "https://github.com/evvrit/foragr",
       technologies: [
         { icon: ["fab", "git"], name: "Git" },
         { icon: ["fab", "figma"], name: "Figma" },

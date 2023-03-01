@@ -2,7 +2,7 @@ import React from "react";
 //Page components
 import AboutSection from "../components/AboutSection";
 import StackSection from "../components/StackSection";
-import FaqSection from "../components/FaqSection";
+import MoreSection from "../components/MoreSection";
 // Animations
 import { motion } from "framer-motion";
 import { pageAnim } from "../animation";
@@ -28,7 +28,7 @@ const AboutUs = () => {
         railsInclude={true}
         herokuInclude={true}
       />
-      <FaqSection />
+      <MoreSection />
     </motion.div>
   );
 };

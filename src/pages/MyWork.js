@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 // Images
-import foragr1 from "../images/foragr-collage.png";
+import foragr from "../images/foragr.png";
 import waves3 from "../images/waves3.png";
 import melisande1 from "../images/melisande1.png";
 // Animations
@@ -28,11 +28,11 @@ const OurWork = () => {
           <motion.h2 variants={fade}>Foragr</motion.h2>
           <motion.div variants={lineAnim} className="line"></motion.div>
           <Link to="/work/foragr">
-            <Hide>
+            <Hide style={{ display: "flex" }}>
               <motion.img
                 variants={photoAnim}
-                src={foragr1}
-                alt="foragr on mobile"
+                src={foragr}
+                alt="foragr homepage"
               />
             </Hide>
           </Link>
@@ -66,20 +66,28 @@ const Work = styled(motion.div)`
 `;
 
 const Project = styled(motion.div)`
-  padding-bottom: 10rem;
+  padding-bottom: 15rem;
   .line {
     height: 0.5rem;
     background: #23dd97;
     margin-bottom: 3rem;
   }
-  img {
-    width: 100%;
-    object-fit: cover;
+  a {
+    display: flex;
+    img {
+      width: 100%;
+      object-fit: cover;
+      border: 1px solid rgba(1, 1, 1, 0.2);
+      box-shadow: 6px 6px 10px rgba(1, 1, 1, 0.2);
+      margin: auto;
+    }
   }
 `;
 
 const Hide = styled.div`
   overflow: hidden;
+  width: 110%;
+  height: 110%;
 `;
 
 export default OurWork;

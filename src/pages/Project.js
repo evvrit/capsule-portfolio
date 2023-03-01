@@ -6,6 +6,8 @@ import { projectState } from "../projectState";
 import { motion } from "framer-motion";
 import { pageAnim } from "../animation";
 import StackSection from "../components/StackSection";
+// Link
+import { Link } from "react-router-dom";
 
 const Project = () => {
   const url = useLocation();
@@ -44,8 +46,14 @@ const Project = () => {
             ))}
           </Details>
           <Buttons>
-            <button>View live project</button>
-            <button>Visit repository</button>
+            <a target="_blank" href={project.siteLink}>
+              View live project
+            </a>
+            {project.repoLink && (
+              <a target="_blank" href={project.repoLink}>
+                Visit repository
+              </a>
+            )}
           </Buttons>
           <ImageDisplay>
             <img src={project.secondaryImg} alt={project.secondaryImgAlt} />
@@ -121,11 +129,24 @@ const Buttons = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
   margin: 6rem 10rem;
-  button {
-    margin: 1rem;
+  a {
+    justify-content: space-around;
+    text-align: center;
     width: 80%;
+    font-weight: bold;
+    margin: 1rem;
+    font-size: 1.3rem;
+    cursor: pointer;
+    padding: 1rem 3rem;
+    border: 3px solid #23d997;
+    background: transparent;
+    color: white;
+    transition: all 0.5s ease;
+    &:hover {
+      background-color: #23d997;
+      color: white;
+    }
   }
 `;
 
