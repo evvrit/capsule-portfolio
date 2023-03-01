@@ -12,7 +12,6 @@ export const Section = styled(motion.div)`
     font-size: 4rem;
   }
   @media (max-width: 1300px) {
-    display: block;
     padding: 2rem 2rem;
     margin-top: 4rem;
     text-align: center;

@@ -28,16 +28,18 @@ const AboutSection = () => {
             </motion.h2>
           </Hide>
         </motion.div>
-        <motion.p variants={fade}>
-          My goal is to deliver business value while leveling up my skills as a
-          developer. I'm particularly interested in the software lifecycle and
-          writing resilient code.
-        </motion.p>
-        <motion.div variants={fade}>
-          <Link to="/contact">
-            <button>Contact</button>
-          </Link>
-        </motion.div>
+        <div>
+          <motion.p variants={fade}>
+            My goal is to deliver business value while leveling up my skills as
+            a developer. I'm particularly interested in the software lifecycle
+            and writing resilient code.
+          </motion.p>
+          <motion.div variants={fade}>
+            <Link to="/contact">
+              <button>Contact</button>
+            </Link>
+          </motion.div>
+        </div>
       </Description>
       <Avatar>
         <motion.img
@@ -68,6 +70,7 @@ const Avatar = styled(Image)`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
   width: 50%;
   img {
     border-radius: 50%;
@@ -85,8 +88,8 @@ const Avatar = styled(Image)`
     margin-right: 0.8rem;
   }
   @media (max-width: 1300px) {
-    margin: auto;
-    padding: 2rem 0rem;
+    padding: 0rem;
+    scale: 80%;
     img {
       width: 25vh;
       height: 25vh;
