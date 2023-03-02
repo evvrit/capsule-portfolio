@@ -63,7 +63,7 @@ const AboutSection = () => {
             Full Stack Developer
           </motion.p>
           <motion.p
-            style={{ fontSize: "1.2rem", padding: "0" }}
+            style={{ padding: "0" }}
             variants={fade}
             initial="hidden"
             animate="show"
@@ -98,26 +98,28 @@ const Avatar = styled(Image)`
   }
   @media (max-width: 900px) {
     padding: 0rem;
-    margin: auto;
+    top: 12rem;
+    left: 50%;
+    transform: translateX(-50%);
     img {
-      width: 10vh;
-      height: 10vh;
+      width: 15vh;
+      height: 15vh;
     }
     p,
     svg {
       font-size: smaller;
+      line-height: 1rem;
     }
   }
 `;
 
 const AboutDescription = styled(Description)`
   width: 50%;
-  /* padding-top: 2rem; */
   @media (max-width: 900px) {
     padding: 0rem;
     width: 100%;
     text-align: center;
-    padding-top: 6rem;
+    margin-top: 18rem;
   }
 `;
 
