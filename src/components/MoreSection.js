@@ -99,10 +99,13 @@ const More = styled(Section)`
     a {
       margin-left: 1rem;
     }
-  }
-  h2 {
-    padding-bottom: 2rem;
-    font-weight: lighter;
+    h2 {
+      padding-bottom: 2rem;
+      font-weight: lighter;
+    }
+    @media (max-width: 1300px) {
+      padding: 3rem 0rem 3rem 0rem;
+    }
   }
 `;
 

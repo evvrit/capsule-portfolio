@@ -24,7 +24,6 @@ const AboutSection = () => {
           position: "relative",
           alignItems: "space-between",
           justifyContent: "space-around",
-          border: "1px solid red",
         }}
       >
         <AboutTitle className="title">

@@ -81,7 +81,7 @@ export const Card = styled.div`
     }
   }
   @media (max-width: 1300px) {
-    padding: 1rem;
+    padding: 0rem;
     .icon {
       flex-basis: 10rem;
     }

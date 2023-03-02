@@ -73,24 +73,36 @@ const Project = () => {
 const StyledProject = styled(motion.div)`
   color: white;
   margin: 5rem 10rem;
+  @media (max-width: 1300px) {
+    margin: 2rem 6rem;
+  }
+  @media (max-width: 900px) {
+    margin: 2rem 2rem;
+  }
 `;
 
 const Banner = styled.div`
-  min-height: 60vh;
+  min-height: 30vh;
   padding-top: 0vh;
   position: relative;
   h2 {
     margin-left: 5rem;
     padding-bottom: 2rem;
+    @media (max-width: 1300px) {
+      margin: 0;
+      text-align: center;
+      font-size: 3rem;
+    }
   }
   img {
+    margin-top: 2rem;
     width: 100%;
     object-fit: cover;
   }
 `;
 
 const ImageDisplay = styled.div`
-  min-height: 90vh;
+  min-height: 20vh;
   img {
     width: 100%;
     height: 100%;
@@ -102,10 +114,10 @@ const Details = styled.div`
   min-height: 80vh;
   margin: 10rem 0rem;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-a3ound;
   @media (max-width: 1300px) {
     display: block;
-    margin: 2rem 2rem;
+    margin: 0;
   }
 `;
 
@@ -123,6 +135,9 @@ const DetailStyle = styled.div`
   p {
     padding: 2rem 0rem;
   }
+  @media (max-width: 1300px) {
+    padding: 5rem 3rem;
+  }
 `;
 
 const Buttons = styled.div`
@@ -130,6 +145,7 @@ const Buttons = styled.div`
   flex-direction: column;
   align-items: center;
   margin: 10rem 10rem 4rem;
+  text-align: center;
   a {
     justify-content: space-around;
     text-align: center;
@@ -147,6 +163,10 @@ const Buttons = styled.div`
       background-color: #23d997;
       color: white;
     }
+  }
+  @media (max-width: 1300px) {
+    margin: 0;
+    padding-top: 4rem;
   }
 `;
 

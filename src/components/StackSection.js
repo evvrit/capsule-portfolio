@@ -56,6 +56,11 @@ const TechStack = styled(Section)`
     width: 70%;
     padding: 2rem 0rem 4rem 0rem;
   }
+  @media (max-width: 1300px) {
+    h2 {
+      font-size: 2rem;
+    }
+  }
 `;
 
 const Cards = styled.div`

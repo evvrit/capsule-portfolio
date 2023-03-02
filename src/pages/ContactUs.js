@@ -79,6 +79,9 @@ const Title = styled.div`
   color: #353535;
   @media (max-width: 1300px) {
     margin-top: 5rem;
+    h2 {
+      font-size: 3rem;
+    }
   }
   .line {
     height: 0.5rem;
@@ -107,6 +110,11 @@ const Social = styled(motion.div)`
     &:hover {
       scale: 90%;
       transition: all 0.2s ease;
+    }
+  }
+  @media (max-width: 1300px) {
+    h4 {
+      font-size: 1.5rem;
     }
   }
 `;

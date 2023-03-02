@@ -82,6 +82,12 @@ const Project = styled(motion.div)`
       margin: auto;
     }
   }
+  @media (max-width: 1300px) {
+    padding-bottom: 10rem;
+    h2 {
+      font-size: 2rem;
+    }
+  }
 `;
 
 const Hide = styled.div`
