@@ -12,6 +12,11 @@ export const Section = styled(motion.div)`
     font-size: 4rem;
   }
   @media (max-width: 1300px) {
+    padding: 2rem 6rem;
+    margin-top: 4rem;
+    text-align: center;
+  }
+  @media (max-width: 900px) {
     padding: 2rem 2rem;
     margin-top: 4rem;
     text-align: center;
@@ -19,14 +24,11 @@ export const Section = styled(motion.div)`
 `;
 
 export const Description = styled.div`
-  flex: 1;
-  padding-right: 5rem;
   z-index: 2;
   h2 {
     font-weight: lighter;
   }
   @media (max-width: 1300px) {
-    padding: 0;
     button {
       margin: 2rem 0rem 5rem 0rem;
     }

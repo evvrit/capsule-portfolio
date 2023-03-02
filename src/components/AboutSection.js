@@ -16,9 +16,18 @@ import { Link } from "react-router-dom";
 
 const AboutSection = () => {
   return (
-    <Section>
-      <Description>
-        <motion.div className="title">
+    <Section style={{ display: "block" }}>
+      <Wave />
+      <motion.div
+        style={{
+          display: "flex",
+          position: "relative",
+          alignItems: "space-between",
+          justifyContent: "space-around",
+          border: "1px solid red",
+        }}
+      >
+        <AboutTitle className="title">
           <Hide>
             <motion.h2 variants={titleAnim}>Hi! I'm</motion.h2>
           </Hide>
@@ -27,55 +36,55 @@ const AboutSection = () => {
               <span>Elyse.</span>
             </motion.h2>
           </Hide>
-        </motion.div>
-        <div>
-          <motion.p variants={fade}>
-            My goal is to deliver business value while leveling up my skills as
-            a developer. I'm particularly interested in the software lifecycle
-            and writing resilient code.
+          <AboutDescription>
+            <div>
+              <motion.p variants={fade}>
+                My goal is to deliver business value while leveling up my skills
+                as a developer. I'm particularly interested in the software
+                lifecycle and writing resilient code.
+              </motion.p>
+              <motion.div variants={fade}>
+                <Link to="/contact">
+                  <button>Contact</button>
+                </Link>
+              </motion.div>
+            </div>
+          </AboutDescription>
+        </AboutTitle>
+        <Avatar>
+          <motion.img
+            variants={photoAnim}
+            initial="hidden"
+            animate="show"
+            src={me2}
+            alt="elyse smiling"
+          />
+          <motion.p variants={fade} initial="hidden" animate="show">
+            Full Stack Developer
           </motion.p>
-          <motion.div variants={fade}>
-            <Link to="/contact">
-              <button>Contact</button>
-            </Link>
-          </motion.div>
-        </div>
-      </Description>
-      <Avatar>
-        <motion.img
-          variants={photoAnim}
-          initial="hidden"
-          animate="show"
-          src={me2}
-          alt="smiling girl"
-        />
-        <motion.p variants={fade} initial="hidden" animate="show">
-          Full Stack Developer
-        </motion.p>
-        <motion.p
-          style={{ fontSize: "1.2rem", padding: "0" }}
-          variants={fade}
-          initial="hidden"
-          animate="show"
-        >
-          <FontAwesomeIcon icon={faLocationDot}></FontAwesomeIcon>Montreal, QC
-        </motion.p>
-      </Avatar>
-      <Wave />
+          <motion.p
+            style={{ fontSize: "1.2rem", padding: "0" }}
+            variants={fade}
+            initial="hidden"
+            animate="show"
+          >
+            <FontAwesomeIcon icon={faLocationDot}></FontAwesomeIcon>Montreal, QC
+          </motion.p>
+        </Avatar>
+      </motion.div>
     </Section>
   );
 };
 
 const Avatar = styled(Image)`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  width: 50%;
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  text-align: center;
   img {
     border-radius: 50%;
-    height: 40vh;
-    width: 40vh;
+    height: 30vh;
+    width: 30vh;
     padding: 0rem 0rem 1rem 2rem;
   }
   p {
@@ -87,12 +96,39 @@ const Avatar = styled(Image)`
     font-size: 1.2rem;
     margin-right: 0.8rem;
   }
-  @media (max-width: 1300px) {
+  @media (max-width: 900px) {
     padding: 0rem;
-    scale: 80%;
+    margin: auto;
     img {
-      width: 25vh;
-      height: 25vh;
+      width: 10vh;
+      height: 10vh;
+    }
+    p,
+    svg {
+      font-size: smaller;
+    }
+  }
+`;
+
+const AboutDescription = styled(Description)`
+  width: 50%;
+  /* padding-top: 2rem; */
+  @media (max-width: 900px) {
+    padding: 0rem;
+    width: 100%;
+    text-align: center;
+    padding-top: 6rem;
+  }
+`;
+
+const AboutTitle = styled(motion.div)`
+  text-align: left;
+  line-height: 6rem;
+  @media (max-width: 900px) {
+    h2 {
+      scale: 80%;
+      line-height: 4rem;
+      text-align: center;
     }
   }
 `;
