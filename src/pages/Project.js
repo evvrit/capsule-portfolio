@@ -9,6 +9,7 @@ import StackSection from "../components/StackSection";
 
 const Project = () => {
   const url = useLocation();
+  // eslint-disable-next-line
   const [projects, setProjects] = useState(projectState);
   const [project, setProject] = useState(null);
 
