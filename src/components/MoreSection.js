@@ -39,19 +39,15 @@ const MoreSection = () => {
           <div className="answer">
             <motion.p variants={fade}>
               Building a study tracker for better long-term recall
-              <a
-                style={{ cursor: "default" }}
-                target="_blank"
-                rel="noreferrer"
-                href="#"
-              >
-                <span>Reps: timing is everything</span>
-              </a>
+              <span style={{ visibility: "hidden" }}>
+                Reps: timing is everything
+              </span>
             </motion.p>
             <motion.p variants={fade}>
               Mastering CS logic
               <a
                 target="_blank"
+                rel="noreferrer"
                 href="https://www.edx.org/course/introduction-computer-science-harvardx-cs50x"
               >
                 <span style={{ cursor: "pointer" }}>

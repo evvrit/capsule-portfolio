@@ -6,8 +6,6 @@ import { projectState } from "../projectState";
 import { motion } from "framer-motion";
 import { pageAnim } from "../animation";
 import StackSection from "../components/StackSection";
-// Link
-import { Link } from "react-router-dom";
 
 const Project = () => {
   const url = useLocation();
