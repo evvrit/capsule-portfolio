@@ -7,7 +7,7 @@ import rails from "../images/rails.svg";
 import styled from "styled-components";
 import { Section, Description, Card } from "../styles";
 // Animations
-import UseScroll from "./UseScroll";
+import UseScroll from "./useScroll";
 
 const StackSection = ({ technologies, railsInclude, herokuInclude }) => {
   return (

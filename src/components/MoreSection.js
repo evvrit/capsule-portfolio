@@ -5,7 +5,7 @@ import { Section, Button } from "../styles";
 import Toggle from "./Toggle";
 // Animations
 import { motion } from "framer-motion";
-import UseScroll from "./UseScroll";
+import UseScroll from "./useScroll";
 import { fade } from "../animation";
 
 const MoreSection = () => {

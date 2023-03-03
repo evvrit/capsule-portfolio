@@ -8,7 +8,7 @@ import melisande1 from "../images/melisande1.png";
 // Animations
 import { motion } from "framer-motion";
 import { pageAnim, fade, photoAnim, lineAnim } from "../animation";
-import UseScroll from "../components/UseScroll";
+import UseScroll from "../components/useScroll";
 
 const OurWork = () => {
   return (
