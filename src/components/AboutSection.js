@@ -16,7 +16,7 @@ import { titleAnim, fade, photoAnim } from "../animation";
 
 const AboutSection = () => {
   return (
-    <Section style={{ display: "block" }}>
+    <Section style={{ display: "block", marginTop: "4rem" }}>
       <Wave />
       <div
         style={{

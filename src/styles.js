@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Section = styled.div`
-  min-height: 70vh;
+  min-height: 80vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
