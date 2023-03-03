@@ -23,7 +23,7 @@ export const Section = styled(motion.div)`
   }
 `;
 
-export const Description = styled.div`
+export const Description = styled(motion.div)`
   z-index: 2;
   h2 {
     font-weight: lighter;
