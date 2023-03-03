@@ -1,8 +1,7 @@
 import styled from "styled-components";
-import { motion } from "framer-motion";
 
-export const Section = styled(motion.div)`
-  min-height: 90vh;
+export const Section = styled.div`
+  min-height: 60vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -23,7 +22,7 @@ export const Section = styled(motion.div)`
   }
 `;
 
-export const Description = styled(motion.div)`
+export const Description = styled.div`
   z-index: 2;
   h2 {
     font-weight: lighter;

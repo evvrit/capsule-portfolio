@@ -1,4 +1,5 @@
 import React from "react";
+
 // Images
 import me2 from "../images/me2.jpg";
 // Icons
@@ -12,13 +13,12 @@ import { Section, Description, Image, Hide } from "../styles";
 // Animations
 import { motion } from "framer-motion";
 import { titleAnim, fade, photoAnim } from "../animation";
-import { Link } from "react-router-dom";
 
 const AboutSection = () => {
   return (
     <Section style={{ display: "block" }}>
       <Wave />
-      <motion.div
+      <div
         style={{
           display: "flex",
           position: "relative",
@@ -36,18 +36,12 @@ const AboutSection = () => {
             </motion.h2>
           </Hide>
           <AboutDescription>
-            <div>
-              <motion.p variants={fade}>
-                My goal is to deliver business value while leveling up my skills
-                as a developer. I'm particularly interested in the software
-                lifecycle and writing resilient code.
-              </motion.p>
-              <motion.div variants={fade}>
-                <Link to="/contact">
-                  <button>Contact</button>
-                </Link>
-              </motion.div>
-            </div>
+            <p>
+              My goal is to deliver business value while leveling up my skills
+              as a developer. I'm particularly interested in the software
+              lifecycle and writing resilient code.
+            </p>
+            <a href="/contact">Contact</a>
           </AboutDescription>
         </AboutTitle>
         <Avatar>
@@ -70,7 +64,7 @@ const AboutSection = () => {
             <FontAwesomeIcon icon={faLocationDot}></FontAwesomeIcon>Montreal, QC
           </motion.p>
         </Avatar>
-      </motion.div>
+      </div>
     </Section>
   );
 };
@@ -114,6 +108,25 @@ const Avatar = styled(Image)`
 
 const AboutDescription = styled(Description)`
   width: 50%;
+  display: block;
+  a {
+    justify-content: space-around;
+    text-align: center;
+    width: 80%;
+    font-weight: bold;
+    margin: 1rem;
+    font-size: 1.3rem;
+    cursor: pointer;
+    padding: 1rem 3rem;
+    border: 3px solid #23d997;
+    background: transparent;
+    color: white;
+    transition: all 0.5s ease;
+    &:hover {
+      background-color: #23d997;
+      color: white;
+    }
+  }
   @media (max-width: 900px) {
     padding: 0rem;
     width: 100%;

@@ -8,6 +8,7 @@ export const pageAnim = {
       ease: "easeOut",
       when: "beforeChildren",
       staggerChildren: 0.25,
+      staggerDirection: 1,
     },
   },
   exit: { opacity: 0, transition: { duration: 0.1 } },

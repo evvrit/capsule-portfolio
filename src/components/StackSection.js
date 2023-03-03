@@ -16,8 +16,12 @@ const StackSection = ({ technologies, railsInclude, herokuInclude }) => {
         <Description>
           <h2>Tech stack</h2>
           <Cards>
-            {technologies.map((technology) => (
-              <TechnologyCard icon={technology.icon} name={technology.name} />
+            {technologies.map((technology, index) => (
+              <TechnologyCard
+                icon={technology.icon}
+                key={index}
+                name={technology.name}
+              />
             ))}
             {railsInclude ? (
               <Card>
