@@ -51,14 +51,17 @@ export const Hide = styled.div`
 
 export const Button = styled.a`
   padding: 1rem;
+  margin: 2rem;
   text-decoration: none;
-  color: black;
-  background-color: white;
+  color: white;
+  border: 2px solid white;
+  background: transparent;
   opacity: 0.8;
-  border-radius: 1rem;
   font-size: 1.6rem;
-  transition: opacity 0.5s ease;
+  transition: all 0.4s ease;
   &:hover {
+    background-color: white;
+    color: black;
     opacity: 1;
   }
 `;
@@ -67,8 +70,8 @@ export const Card = styled.div`
   justify-content: center;
   padding: 2rem;
   margin: 1rem;
+  width: 20%;
   .icon {
-    flex-basis: 15rem;
     display: flex;
     align-items: center;
     svg,
@@ -76,11 +79,13 @@ export const Card = styled.div`
       color: #23d997;
     }
     h3 {
-      padding: 1rem;
+      padding-left: 2rem;
     }
   }
-  @media (max-width: 1300px) {
-    padding: 0rem;
+  @media (max-width: 900px) {
+    padding: 1rem;
+    width: 25%;
+
     .icon {
       flex-basis: 10rem;
     }
@@ -88,5 +93,8 @@ export const Card = styled.div`
     img {
       scale: 0.6;
     }
+  }
+  @media (max-width: 700px) {
+    width: 30%;
   }
 `;

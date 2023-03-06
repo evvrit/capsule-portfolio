@@ -1,17 +1,17 @@
 {
-  "short_name": "Elyse Turpin",
+  "short_name": "Elyse Turpin - Web Developer",
   "description": "Elyse Turpin Full Stack Developer in Montreal, Quebec, Canada",
   "name": "Elyse Turpin Web Developer Portfolio",
   "icons": [
     {
-      "src": "logo.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
+      "src": "e-favicon.ico",
+      "sizes": "150x133",
       "type": "image/x-icon"
     },
     {
-      "src": "logo.png",
+      "src": "e-logo.png",
       "type": "image/png",
-      "sizes": "500x500"
+      "sizes": "2400x2133"
     }
   ],
   "start_url": ".",

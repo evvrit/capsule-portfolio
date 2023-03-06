@@ -4,10 +4,10 @@ export const pageAnim = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.5,
+      duration: 0.3,
       ease: "easeOut",
       when: "beforeChildren",
-      staggerChildren: 0.25,
+      staggerChildren: 0.2,
       staggerDirection: 1,
     },
   },
@@ -16,7 +16,7 @@ export const pageAnim = {
 
 export const titleAnim = {
   hidden: { y: 200 },
-  show: { y: 0, transition: { duration: 0.5, ease: "easeOut" } },
+  show: { y: 0, transition: { duration: 0.4, ease: "easeOut" } },
 };
 
 export const fade = {
@@ -35,12 +35,7 @@ export const photoAnim = {
 
 export const lineAnim = {
   hidden: { width: "0%" },
-  show: { width: "100%", transition: { duration: 1 } },
-};
-
-export const sliderContainer = {
-  hidden: { opacity: 1 },
-  show: { opacity: 1, transition: { staggerChildren: 0.15, ease: "easeOut" } },
+  show: { width: "100%", transition: { duration: 0.7 } },
 };
 
 export const scrollReveal = {
@@ -50,17 +45,4 @@ export const scrollReveal = {
     transition: { ease: "easeOut", duration: 0.5 },
   },
   show: { opacity: 1, x: "0%", transition: { ease: "easeOut", duration: 0.5 } },
-};
-
-export const scrollInto = {
-  hidden: {
-    opacity: 0,
-    width: "120%",
-    transition: { ease: "easeOut", duration: 0.75 },
-  },
-  show: {
-    opacity: 1,
-    width: "100%",
-    transition: { ease: "easeOut", duration: 0.75 },
-  },
 };

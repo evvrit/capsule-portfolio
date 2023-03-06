@@ -52,6 +52,8 @@ const StackSection = ({ technologies, railsInclude, herokuInclude }) => {
 export default StackSection;
 
 const TechStack = styled(Section)`
+  display: flex;
+  justify-content: center;
   h2 {
     padding-bottom: 5rem;
     text-align: center;
@@ -69,6 +71,12 @@ const TechStack = styled(Section)`
 
 const Cards = styled.div`
   display: flex;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
+  flex-basis: 2rem;
   justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  @media (max-width: 900px) {
+    gap: 1rem;
+  }
 `;

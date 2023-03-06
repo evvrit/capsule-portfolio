@@ -92,9 +92,7 @@ const More = styled(Section)`
   .answer {
     cursor: default;
     padding: 3rem 3rem 3rem 0rem;
-    a {
-      margin-left: 1rem;
-    }
+    margin-top: 2rem;
     h2 {
       padding-bottom: 2rem;
       font-weight: lighter;

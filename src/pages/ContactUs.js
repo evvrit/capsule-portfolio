@@ -28,19 +28,31 @@ const Contact = () => {
     >
       <Title>
         <Hide>
-          <motion.h2 variants={titleAnim}>Get In Touch</motion.h2>
+          <motion.h2
+            variants={titleAnim}
+            animate={{ transition: { duration: 0.2 } }}
+          >
+            Get In Touch
+          </motion.h2>
           <motion.div variants={lineAnim} className="line"></motion.div>
         </Hide>
       </Title>
       <Hide>
-        <Social variants={titleAnim} onClick={() => copyToClipboardHandler()}>
+        <Social
+          variants={titleAnim}
+          animate={{ transition: { duration: 0.15 } }}
+          onClick={() => copyToClipboardHandler()}
+        >
           <FontAwesomeIcon icon={["fas", "envelope"]} />
           <h4>Send Me An Email</h4>
           <Tooltip id="tooltip">copied!</Tooltip>
         </Social>
       </Hide>
       <Hide>
-        <Social variants={titleAnim}>
+        <Social
+          variants={titleAnim}
+          animate={{ transition: { duration: 0.15 } }}
+        >
           <a
             target="_blank"
             rel="noreferrer"
@@ -52,7 +64,10 @@ const Contact = () => {
         </Social>
       </Hide>
       <Hide>
-        <Social variants={titleAnim}>
+        <Social
+          variants={titleAnim}
+          animate={{ transition: { duration: 0.15 } }}
+        >
           <a target="_blank" rel="noreferrer" href="https://github.com/evvrit">
             <FontAwesomeIcon icon={["fab", "github"]} />
           </a>

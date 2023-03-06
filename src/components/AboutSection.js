@@ -1,5 +1,6 @@
 import React from "react";
-
+// Link
+import { Link } from "react-router-dom";
 // Images
 import me2 from "../images/me2.jpg";
 // Icons
@@ -41,7 +42,7 @@ const AboutSection = () => {
               as a developer. I'm particularly interested in the software
               lifecycle and writing resilient code.
             </p>
-            <a href="/contact">Contact</a>
+            <Link to="/contact">Contact</Link>
           </AboutDescription>
         </AboutTitle>
         <Avatar>
