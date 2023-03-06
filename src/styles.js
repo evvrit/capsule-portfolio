@@ -70,7 +70,7 @@ export const Card = styled.div`
   justify-content: center;
   padding: 2rem;
   margin: 1rem;
-  width: 20%;
+  width: 15%;
   .icon {
     display: flex;
     align-items: center;
@@ -82,9 +82,9 @@ export const Card = styled.div`
       padding-left: 2rem;
     }
   }
-  @media (max-width: 900px) {
+  @media (max-width: 1100px) {
     padding: 1rem;
-    width: 25%;
+    width: 20%;
 
     .icon {
       flex-basis: 10rem;

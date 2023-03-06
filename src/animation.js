@@ -4,7 +4,7 @@ export const pageAnim = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.3,
+      duration: 0.4,
       ease: "easeOut",
       when: "beforeChildren",
       staggerChildren: 0.2,
@@ -29,7 +29,7 @@ export const photoAnim = {
   show: {
     scale: 1,
     opacity: 1,
-    transition: { ease: "easeOut", duration: 0.75 },
+    transition: { ease: "easeOut", duration: 0.6 },
   },
 };
 

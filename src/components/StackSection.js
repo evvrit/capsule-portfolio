@@ -62,7 +62,7 @@ const TechStack = styled(Section)`
     width: 70%;
     padding: 2rem 0rem 4rem 0rem;
   }
-  @media (max-width: 1300px) {
+  @media (max-width: 900px) {
     h2 {
       font-size: 2rem;
     }
@@ -75,8 +75,9 @@ const Cards = styled.div`
   flex-basis: 2rem;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
-  @media (max-width: 900px) {
-    gap: 1rem;
+  column-gap: 4rem;
+  @media (max-width: 700px) {
+    column-gap: 1rem;
+    justify-content: space-around;
   }
 `;
