@@ -3,7 +3,7 @@ import React from "react";
 import styled from "styled-components";
 // Animations
 import { motion } from "framer-motion";
-import { pageAnim, titleAnim, lineAnim } from "../animation";
+import { pageAnim, titleAnim, lineAnim, fade } from "../animation";
 // Icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -27,15 +27,16 @@ const Contact = () => {
       style={{ background: "#fff" }}
     >
       <Title>
-        <Hide>
-          <motion.h2
-            variants={titleAnim}
-            animate={{ transition: { duration: 0.2 } }}
-          >
-            Get In Touch
-          </motion.h2>
-          <motion.div variants={lineAnim} className="line"></motion.div>
-        </Hide>
+        <motion.h2 variants={fade} initial="hidden" animate="show">
+          Get In Touch
+        </motion.h2>
+        <motion.div
+          variants={lineAnim}
+          initial="hidden"
+          animate="show"
+          transition={{ delay: 0 }}
+          className="line"
+        ></motion.div>
       </Title>
       <Hide>
         <Social
@@ -87,7 +88,7 @@ const StyledContact = styled(motion.div)`
   }
 `;
 
-const Title = styled.div`
+const Title = styled(motion.div)`
   h2 {
     padding: 1rem 0rem;
   }
