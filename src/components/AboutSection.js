@@ -2,7 +2,7 @@ import React from "react";
 // Link
 import { Link } from "react-router-dom";
 // Images
-import me2 from "../images/me2.jpg";
+import me2 from "../images/me-sm.jpg";
 // Icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
@@ -10,7 +10,7 @@ import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import styled from "styled-components";
 // Components
 import Wave from "./Wave";
-import { Section, Description, Image, Hide } from "../styles";
+import { Section, Description, Hide } from "../styles";
 // Animations
 import { motion } from "framer-motion";
 import { titleAnim, fade } from "../animation";
@@ -45,29 +45,19 @@ const AboutSection = () => {
             <Link to="/contact">Contact</Link>
           </AboutDescription>
         </AboutTitle>
-        {me2 && (
-          <Avatar variants={fade} initial="hidden" animate="show">
-            <motion.img src={me2} alt="elyse smiling" />
-            <motion.p variants={fade} initial="hidden" animate="show">
-              Full Stack Developer
-            </motion.p>
-            <motion.p
-              style={{ padding: "0" }}
-              variants={fade}
-              initial="hidden"
-              animate="show"
-            >
-              <FontAwesomeIcon icon={faLocationDot}></FontAwesomeIcon>Montreal,
-              QC
-            </motion.p>
-          </Avatar>
-        )}
+        <Avatar variants={fade} initial="hidden" animate="show">
+          <img src={me2} alt="Elyse Turpin, Full Stack Developer" />
+          <p>Full Stack Developer</p>
+          <p style={{ padding: "0" }}>
+            <FontAwesomeIcon icon={faLocationDot}></FontAwesomeIcon>Montreal, QC
+          </p>
+        </Avatar>
       </div>
     </Section>
   );
 };
 
-const Avatar = styled(Image)`
+const Avatar = styled.div`
   position: absolute;
   top: 0%;
   right: 0%;

@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 // Images
-import foragr from "../images/foragr.png";
+import foragr from "../images/foragr.jpg";
 import waves3 from "../images/waves3.png";
 import melisande1 from "../images/melisande1.png";
 // Animations

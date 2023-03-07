@@ -1,5 +1,5 @@
-import foragrcollage1 from "./images/foragr-collage.png";
-import foragrcollage2 from "./images/foragr-collage2.png";
+import foragrcollage1 from "./images/foragr-collage.jpg";
+import foragrcollage2 from "./images/foragr-collage2.jpg";
 import waves1 from "./images/waves1.png";
 import wavescollage from "./images/waves-collage.png";
 import melisande1 from "./images/melisande1.png";
