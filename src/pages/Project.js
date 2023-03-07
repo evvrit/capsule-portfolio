@@ -34,7 +34,9 @@ const Project = () => {
         >
           <Banner variants={fade} initial="hidden" animate="show">
             <h2>{project.title}</h2>
-            <img src={project.mainImg} alt={project.mainImgAlt} />
+            {project.mainImg && (
+              <img src={project.mainImg} alt={project.mainImgAlt} />
+            )}
           </Banner>
           <Buttons>
             <a target="_blank" rel="noreferrer" href={project.siteLink}>
