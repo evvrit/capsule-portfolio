@@ -94,6 +94,6 @@ export const Card = styled.div`
     }
   }
   @media (max-width: 700px) {
-    width: 30%;
+    width: fit-content;
   }
 `;
