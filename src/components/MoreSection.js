@@ -17,7 +17,7 @@ const MoreSection = () => {
         </h2>
         <Toggle title="My CV">
           <div className="answer">
-            <motion.div variants={fade}>
+            <motion.div variants={fade} style={{ marginTop: "2rem" }}>
               <Button
                 href="https://drive.google.com/file/d/1PNSuXYQiDNkRkgfR_mVX3A_g5mk7oy_H/view?usp=sharing"
                 target="_blank"
@@ -92,12 +92,10 @@ const More = styled(Section)`
   }
   .answer {
     cursor: default;
-    padding: 3rem 3rem 3rem 0rem;
-    margin-top: 2rem;
-    h2 {
-      padding-bottom: 2rem;
-      font-weight: lighter;
+    p {
+      padding: 3rem 0rem 0rem 0rem;
     }
+    padding: 2rem 3rem 3rem 0rem;
     @media (max-width: 1300px) {
       padding: 3rem 0rem 3rem 0rem;
     }

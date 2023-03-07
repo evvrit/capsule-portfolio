@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { lineAnim } from "../animation";
 
 const Toggle = ({ children, title }) => {
   const [toggle, setToggle] = useState(false);
@@ -7,7 +8,11 @@ const Toggle = ({ children, title }) => {
     <motion.div layout className="question" onClick={() => setToggle(!toggle)}>
       <motion.h4 layout>{title}</motion.h4>
       {toggle ? children : ""}
-      <div className="bookend-line"></div>
+      <motion.div
+        variants={lineAnim}
+        transition={{ delay: 0.5 }}
+        className="bookend-line"
+      ></motion.div>
     </motion.div>
   );
 };
