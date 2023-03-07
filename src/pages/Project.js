@@ -126,7 +126,7 @@ const Details = styled.div`
 `;
 
 const DetailStyle = styled.div`
-  padding: 5rem;
+  padding: 2rem;
   h3 {
     font-size: 2rem;
   }
