@@ -4,7 +4,7 @@ import { useLocation } from "react-router-dom";
 import { projectState } from "../projectState";
 // Animations
 import { motion } from "framer-motion";
-import { pageAnim } from "../animation";
+import { pageAnim, fade } from "../animation";
 import StackSection from "../components/StackSection";
 import UseScroll from "../components/useScroll";
 
@@ -32,7 +32,7 @@ const Project = () => {
           animate="show"
           exit="exit"
         >
-          <Banner>
+          <Banner variants={fade} initial="hidden" animate="show">
             <h2>{project.title}</h2>
             <img src={project.mainImg} alt={project.mainImgAlt} />
           </Banner>
@@ -83,7 +83,7 @@ const StyledProject = styled(motion.div)`
   }
 `;
 
-const Banner = styled.div`
+const Banner = styled(motion.div)`
   min-height: 30vh;
   padding-top: 0vh;
   position: relative;
