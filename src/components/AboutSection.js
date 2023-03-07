@@ -13,7 +13,7 @@ import Wave from "./Wave";
 import { Section, Description, Image, Hide } from "../styles";
 // Animations
 import { motion } from "framer-motion";
-import { titleAnim, fade, photoAnim } from "../animation";
+import { titleAnim, fade } from "../animation";
 
 const AboutSection = () => {
   return (
@@ -45,14 +45,8 @@ const AboutSection = () => {
             <Link to="/contact">Contact</Link>
           </AboutDescription>
         </AboutTitle>
-        <Avatar>
-          <motion.img
-            variants={photoAnim}
-            initial="hidden"
-            animate="show"
-            src={me2}
-            alt="elyse smiling"
-          />
+        <Avatar variants={fade} initial="hidden" animate="show">
+          <motion.img src={me2} alt="elyse smiling" />
           <motion.p variants={fade} initial="hidden" animate="show">
             Full Stack Developer
           </motion.p>

@@ -7,7 +7,7 @@ import waves3 from "../images/waves3.png";
 import melisande1 from "../images/melisande1.png";
 // Animations
 import { motion } from "framer-motion";
-import { pageAnim, fade, photoAnim, lineAnim } from "../animation";
+import { pageAnim, fade, lineAnim } from "../animation";
 import UseScroll from "../components/useScroll";
 
 const OurWork = () => {
@@ -41,11 +41,7 @@ const OurWork = () => {
           ></motion.div>
           <Link to="/work/foragr">
             <Hide style={{ display: "flex" }}>
-              <motion.img
-                variants={photoAnim}
-                src={foragr}
-                alt="foragr homepage"
-              />
+              <motion.img variants={fade} src={foragr} alt="foragr homepage" />
             </Hide>
           </Link>
         </Project>

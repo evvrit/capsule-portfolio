@@ -24,15 +24,6 @@ export const fade = {
   show: { opacity: 1, transition: { ease: "easeOut", duration: 0.5 } },
 };
 
-export const photoAnim = {
-  hidden: { scale: 1, opacity: 0 },
-  show: {
-    scale: 1,
-    opacity: 1,
-    transition: { ease: "easeOut", duration: 0.6 },
-  },
-};
-
 export const lineAnim = {
   hidden: { width: "0%" },
   show: { width: "100%", transition: { duration: 0.7 } },
