@@ -54,6 +54,7 @@ export default StackSection;
 const TechStack = styled(Section)`
   display: flex;
   justify-content: center;
+  margin-top: 4rem;
   h2 {
     padding-bottom: 5rem;
     text-align: center;

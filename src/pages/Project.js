@@ -6,6 +6,7 @@ import { projectState } from "../projectState";
 import { motion } from "framer-motion";
 import { pageAnim } from "../animation";
 import StackSection from "../components/StackSection";
+import UseScroll from "../components/useScroll";
 
 const Project = () => {
   const url = useLocation();
@@ -53,15 +54,17 @@ const Project = () => {
           <ImageDisplay>
             <img src={project.secondaryImg} alt={project.secondaryImgAlt} />
           </ImageDisplay>
-          <Details>
-            {project.details.map((detail) => (
-              <Detail
-                title={detail.title}
-                description={detail.description}
-                key={detail.title}
-              />
-            ))}
-          </Details>
+          <UseScroll>
+            <Details>
+              {project.details.map((detail) => (
+                <Detail
+                  title={detail.title}
+                  description={detail.description}
+                  key={detail.title}
+                />
+              ))}
+            </Details>
+          </UseScroll>
         </StyledProject>
       )}
       ;
@@ -116,7 +119,7 @@ const Details = styled.div`
   justify-content: space-a3ound;
   @media (max-width: 1300px) {
     display: block;
-    margin: 0;
+    margin-top: 6rem;
   }
 `;
 

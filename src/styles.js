@@ -12,12 +12,11 @@ export const Section = styled.div`
   }
   @media (max-width: 1300px) {
     padding: 2rem 6rem;
-    margin-top: 4rem;
+    margin-top: 2rem;
     text-align: center;
   }
   @media (max-width: 900px) {
     padding: 2rem 2rem;
-    margin-top: 4rem;
     text-align: center;
   }
 `;

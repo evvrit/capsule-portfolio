@@ -76,6 +76,7 @@ const MoreSection = () => {
 
 const More = styled(Section)`
   display: block;
+  margin-top: 4rem;
   span {
     display: block;
   }
