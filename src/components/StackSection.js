@@ -54,7 +54,7 @@ export default StackSection;
 const TechStack = styled(Section)`
   display: flex;
   justify-content: center;
-  margin-top: 4rem;
+  margin-top: 2rem;
   h2 {
     padding-bottom: 5rem;
     text-align: center;
@@ -64,6 +64,7 @@ const TechStack = styled(Section)`
     padding: 2rem 0rem 4rem 0rem;
   }
   @media (max-width: 900px) {
+    margin-top: 4rem;
     h2 {
       font-size: 2rem;
     }
