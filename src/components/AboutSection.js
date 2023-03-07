@@ -45,20 +45,23 @@ const AboutSection = () => {
             <Link to="/contact">Contact</Link>
           </AboutDescription>
         </AboutTitle>
-        <Avatar variants={fade} initial="hidden" animate="show">
-          <motion.img src={me2} alt="elyse smiling" />
-          <motion.p variants={fade} initial="hidden" animate="show">
-            Full Stack Developer
-          </motion.p>
-          <motion.p
-            style={{ padding: "0" }}
-            variants={fade}
-            initial="hidden"
-            animate="show"
-          >
-            <FontAwesomeIcon icon={faLocationDot}></FontAwesomeIcon>Montreal, QC
-          </motion.p>
-        </Avatar>
+        {me2 && (
+          <Avatar variants={fade} initial="hidden" animate="show">
+            <motion.img src={me2} alt="elyse smiling" />
+            <motion.p variants={fade} initial="hidden" animate="show">
+              Full Stack Developer
+            </motion.p>
+            <motion.p
+              style={{ padding: "0" }}
+              variants={fade}
+              initial="hidden"
+              animate="show"
+            >
+              <FontAwesomeIcon icon={faLocationDot}></FontAwesomeIcon>Montreal,
+              QC
+            </motion.p>
+          </Avatar>
+        )}
       </div>
     </Section>
   );

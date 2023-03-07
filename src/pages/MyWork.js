@@ -15,51 +15,61 @@ const OurWork = () => {
     <Work variants={pageAnim} initial="hidden" animate="show" exit="exit">
       <h1>Projects</h1>
       <UseScroll>
-        <Project>
-          <h2>Waves</h2>
-          <motion.div
-            variants={lineAnim}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true }}
-            className="line"
-          ></motion.div>
-          <Link to="/work/waves">
-            <img src={waves3} alt="waves screenshot" />
-          </Link>
-        </Project>
+        {waves3 && (
+          <Project>
+            <h2>Waves</h2>
+            <motion.div
+              variants={lineAnim}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true }}
+              className="line"
+            ></motion.div>
+            <Link to="/work/waves">
+              <img src={waves3} alt="waves screenshot" />
+            </Link>
+          </Project>
+        )}
       </UseScroll>
       <UseScroll>
-        <Project>
-          <motion.h2 variants={fade}>Foragr</motion.h2>
-          <motion.div
-            variants={lineAnim}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true }}
-            className="line"
-          ></motion.div>
-          <Link to="/work/foragr">
-            <Hide style={{ display: "flex" }}>
-              <motion.img variants={fade} src={foragr} alt="foragr homepage" />
-            </Hide>
-          </Link>
-        </Project>
+        {foragr && (
+          <Project>
+            <motion.h2 variants={fade}>Foragr</motion.h2>
+            <motion.div
+              variants={lineAnim}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true }}
+              className="line"
+            ></motion.div>
+            <Link to="/work/foragr">
+              <Hide style={{ display: "flex" }}>
+                <motion.img
+                  variants={fade}
+                  src={foragr}
+                  alt="foragr homepage"
+                />
+              </Hide>
+            </Link>
+          </Project>
+        )}
       </UseScroll>
       <UseScroll>
-        <Project>
-          <h2>Melisande Yoga</h2>
-          <motion.div
-            variants={lineAnim}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true }}
-            className="line"
-          ></motion.div>
-          <Link to="/work/melisandeyoga">
-            <img src={melisande1} alt="melisande yoga" />
-          </Link>
-        </Project>
+        {melisande1 && (
+          <Project>
+            <h2>Melisande Yoga</h2>
+            <motion.div
+              variants={lineAnim}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true }}
+              className="line"
+            ></motion.div>
+            <Link to="/work/melisandeyoga">
+              <img src={melisande1} alt="melisande yoga" />
+            </Link>
+          </Project>
+        )}
       </UseScroll>
     </Work>
   );
