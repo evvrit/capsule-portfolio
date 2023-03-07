@@ -17,7 +17,13 @@ const OurWork = () => {
       <UseScroll>
         <Project>
           <h2>Waves</h2>
-          <motion.div variants={lineAnim} className="line"></motion.div>
+          <motion.div
+            variants={lineAnim}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            className="line"
+          ></motion.div>
           <Link to="/work/waves">
             <img src={waves3} alt="waves screenshot" />
           </Link>
@@ -26,7 +32,13 @@ const OurWork = () => {
       <UseScroll>
         <Project>
           <motion.h2 variants={fade}>Foragr</motion.h2>
-          <motion.div variants={lineAnim} className="line"></motion.div>
+          <motion.div
+            variants={lineAnim}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            className="line"
+          ></motion.div>
           <Link to="/work/foragr">
             <Hide style={{ display: "flex" }}>
               <motion.img
@@ -41,7 +53,13 @@ const OurWork = () => {
       <UseScroll>
         <Project>
           <h2>Melisande Yoga</h2>
-          <motion.div variants={lineAnim} className="line"></motion.div>
+          <motion.div
+            variants={lineAnim}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            className="line"
+          ></motion.div>
           <Link to="/work/melisandeyoga">
             <img src={melisande1} alt="melisande yoga" />
           </Link>

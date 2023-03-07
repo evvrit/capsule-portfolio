@@ -10,7 +10,9 @@ const Toggle = ({ children, title }) => {
       {toggle ? children : ""}
       <motion.div
         variants={lineAnim}
-        transition={{ delay: 0.5 }}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
         className="bookend-line"
       ></motion.div>
     </motion.div>
