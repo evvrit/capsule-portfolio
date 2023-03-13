@@ -1,23 +1,15 @@
 <!-- Force HTTPS://WWW and remove trailing / from files -->
 
-<!-- Turn on rewrite engine -->
-
 RewriteEngine on
 
-<!-- Remove trailing slash from non-filepath urls -->
+<!-- Force https and www -->
 
-RewriteCond %{REQUEST_URI} /(.+)/$
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} !^www\.example\.com$ [NC]
+RewriteRule ^(.\*)$ https://www.example.com/$1 [L,R=301]
+
+<!-- Remove trailing slash if not directory -->
+
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^ https://www.example.com/%1 [R=301,L]
-
-<!-- Include trailing slash on directory -->
-
-RewriteCond %{REQUEST_URI} !(.+)/$
-RewriteCond %{REQUEST_FILENAME} -d
-RewriteRule ^(.+)$ https://www.example.com/$1/ [R=301,L]
-
-<!-- Force HTTPS and WWW -->
-
-RewriteCond %{HTTP_HOST} !^www\.(._)$ [OR,NC]
-RewriteCond %{https} off
-RewriteRule ^(._)$ https://www.example.com/$1 [R=301,L]
+RewriteCond %{REQUEST_URI} (.+)/$
+RewriteRule ^(.*)/$ https://www.example.com/$1 [R=301,L]
