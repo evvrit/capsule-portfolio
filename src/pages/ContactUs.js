@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { pageAnim, titleAnim, lineAnim, fade } from "../animation";
 // Icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 const Contact = () => {
   const copyToClipboardHandler = () => {
@@ -44,7 +45,7 @@ const Contact = () => {
           animate={{ transition: { duration: 0.15 } }}
           onClick={() => copyToClipboardHandler()}
         >
-          <FontAwesomeIcon icon={["fas", "envelope"]} />
+          <FontAwesomeIcon icon={faEnvelope} />
           <h4>Send Me An Email</h4>
           <Tooltip id="tooltip">copied!</Tooltip>
         </Social>

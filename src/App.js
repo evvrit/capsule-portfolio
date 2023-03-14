@@ -12,11 +12,10 @@ import { AnimatePresence } from "framer-motion";
 // Icons
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
-import { fas } from "@fortawesome/free-solid-svg-icons";
 
 function App() {
   // icons library
-  library.add(fab, fas);
+  library.add(fab);
 
   // routing
   const location = useLocation();
