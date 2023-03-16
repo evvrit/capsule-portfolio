@@ -7,7 +7,7 @@ import waves3 from "../images/waves3.png";
 import melisande1 from "../images/melisande1.png";
 // Animations
 import { motion } from "framer-motion";
-import { pageAnim, fade, lineAnim } from "../animation";
+import { pageAnim, lineAnim } from "../animation";
 import UseScroll from "../components/useScroll";
 
 const OurWork = () => {
@@ -34,7 +34,7 @@ const OurWork = () => {
       <UseScroll>
         {foragr && (
           <Project>
-            <motion.h2 variants={fade}>Foragr</motion.h2>
+            <h2>Foragr</h2>
             <motion.div
               variants={lineAnim}
               initial="hidden"
@@ -43,13 +43,7 @@ const OurWork = () => {
               className="line"
             ></motion.div>
             <Link to="/work/foragr">
-              <Hide style={{ display: "flex" }}>
-                <motion.img
-                  variants={fade}
-                  src={foragr}
-                  alt="foragr homepage"
-                />
-              </Hide>
+              <img src={foragr} alt="foragr homepage" />
             </Link>
           </Project>
         )}
@@ -112,12 +106,6 @@ const Project = styled(motion.div)`
       font-size: 2rem;
     }
   }
-`;
-
-const Hide = styled.div`
-  overflow: hidden;
-  width: 110%;
-  height: 110%;
 `;
 
 export default OurWork;
