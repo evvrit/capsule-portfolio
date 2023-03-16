@@ -57,12 +57,11 @@ const AboutSection = () => {
   );
 };
 
-const Avatar = styled.div`
+const Avatar = styled(motion.div)`
   position: absolute;
   top: 0%;
   right: 0%;
   text-align: center;
-  transition: all 0.1s ease;
   img {
     border-radius: 50%;
     height: 30vh;
