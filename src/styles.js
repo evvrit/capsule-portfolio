@@ -1,54 +1,6 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
-export const Section = styled.div`
-  min-height: 80vh;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 5rem 10rem;
-  color: white;
-  h2 {
-    font-size: 4rem;
-  }
-  @media (max-width: 1300px) {
-    padding: 2rem 6rem;
-    margin-top: 2rem;
-    text-align: center;
-  }
-  @media (max-width: 900px) {
-    padding: 2rem 2rem;
-    text-align: center;
-  }
-`;
-
-export const Description = styled.div`
-  z-index: 2;
-  h2 {
-    font-weight: lighter;
-  }
-  @media (max-width: 1300px) {
-    button {
-      margin: 2rem 0rem 5rem 0rem;
-    }
-  }
-`;
-
-export const Image = styled(motion.div)`
-  flex: 1;
-  overflow: hidden;
-  z-index: 2;
-  img {
-    width: 100%;
-    height: 90vh;
-    object-fit: cover;
-  }
-`;
-
-export const Hide = styled.div`
-  overflow: hidden;
-`;
-
 export const Button = styled.a`
   padding: 1rem;
   margin: 2rem;
@@ -96,5 +48,53 @@ export const Card = styled.div`
   }
   @media (max-width: 700px) {
     width: fit-content;
+  }
+`;
+
+export const Description = styled.div`
+  z-index: 2;
+  h2 {
+    font-weight: lighter;
+  }
+  @media (max-width: 1300px) {
+    button {
+      margin: 2rem 0rem 5rem 0rem;
+    }
+  }
+`;
+
+export const Hide = styled.div`
+  overflow: hidden;
+`;
+
+export const Image = styled(motion.div)`
+  flex: 1;
+  overflow: hidden;
+  z-index: 2;
+  img {
+    width: 100%;
+    height: 90vh;
+    object-fit: cover;
+  }
+`;
+
+export const Section = styled.div`
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5rem 10rem;
+  color: white;
+  h2 {
+    font-size: 4rem;
+  }
+  @media (max-width: 1300px) {
+    padding: 2rem 6rem;
+    margin-top: 2rem;
+    text-align: center;
+  }
+  @media (max-width: 900px) {
+    padding: 2rem 2rem;
+    text-align: center;
   }
 `;
