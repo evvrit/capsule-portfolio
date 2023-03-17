@@ -34,9 +34,16 @@ const Project = () => {
         >
           <Banner variants={fade} initial="hidden" animate="show">
             <h2>{project.title}</h2>
-            {project.mainImg && (
-              <img src={project.mainImg} alt={project.mainImgAlt} />
-            )}
+            <a
+              style={{ cursor: "default" }}
+              target="_blank"
+              rel="noreferrer"
+              href={project.siteLink}
+            >
+              {project.mainImg && (
+                <img src={project.mainImg} alt={project.mainImgAlt} />
+              )}
+            </a>
           </Banner>
           <Buttons>
             <a target="_blank" rel="noreferrer" href={project.siteLink}>
@@ -54,7 +61,14 @@ const Project = () => {
             herokuInclude={project.herokuInclude}
           />
           <ImageDisplay>
-            <img src={project.secondaryImg} alt={project.secondaryImgAlt} />
+            <a
+              style={{ cursor: "default" }}
+              target="_blank"
+              rel="noreferrer"
+              href={project.siteLink}
+            >
+              <img src={project.secondaryImg} alt={project.secondaryImgAlt} />
+            </a>
           </ImageDisplay>
           <UseScroll>
             <Details>
