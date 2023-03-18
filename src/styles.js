@@ -48,7 +48,7 @@ export const Card = styled.div`
   }
   @media (max-width: 700px) {
     padding: 0.5rem;
-    width: 35%;
+    width: fit-content;
     .icon {
       svg,
       img {
