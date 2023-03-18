@@ -47,7 +47,18 @@ export const Card = styled.div`
     }
   }
   @media (max-width: 700px) {
-    width: fit-content;
+    padding: 0.5rem;
+    width: 35%;
+    .icon {
+      svg,
+      img {
+        width: 2rem;
+      }
+      h3 {
+        font-size: 1rem;
+        padding-left: 1rem;
+      }
+    }
   }
 `;
 

@@ -60,16 +60,6 @@ const Project = () => {
             railsInclude={project.railsInclude}
             herokuInclude={project.herokuInclude}
           />
-          <ImageDisplay>
-            <a
-              style={{ cursor: "default" }}
-              target="_blank"
-              rel="noreferrer"
-              href={project.siteLink}
-            >
-              <img src={project.secondaryImg} alt={project.secondaryImgAlt} />
-            </a>
-          </ImageDisplay>
           <UseScroll>
             <Details>
               {project.details.map((detail) => (
@@ -119,17 +109,8 @@ const Banner = styled(motion.div)`
   }
 `;
 
-const ImageDisplay = styled.div`
-  min-height: 20vh;
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-`;
-
 const Details = styled.div`
-  min-height: 80vh;
+  min-height: 60vh;
   margin: 10rem 0rem;
   align-items: center;
   justify-content: space-a3ound;
@@ -151,10 +132,10 @@ const DetailStyle = styled.div`
     margin: 1rem 0rem;
   }
   p {
-    padding: 2rem 0rem;
+    padding: 1rem 0rem;
   }
   @media (max-width: 1300px) {
-    padding: 5rem 3rem;
+    padding: 3rem 3rem;
   }
 `;
 
