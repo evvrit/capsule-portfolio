@@ -2,7 +2,7 @@ import React from "react";
 // Link
 import { Link } from "react-router-dom";
 // Images
-import me2 from "../images/me-s.jpg";
+import me from "../images/elyse.jpg";
 // Icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
@@ -46,7 +46,7 @@ const AboutSection = () => {
           </AboutDescription>
         </AboutTitle>
         <Avatar variants={fade} initial="hidden" animate="show">
-          <img src={me2} alt="Elyse Turpin, Full Stack Developer" />
+          <img src={me} alt="Elyse Turpin, Full Stack Developer" />
           <p>Full Stack Developer</p>
           <p style={{ padding: "0" }}>
             <FontAwesomeIcon icon={faLocationDot}></FontAwesomeIcon>Montreal, QC
