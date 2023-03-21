@@ -1,7 +1,7 @@
 import React from "react";
 import { useLocation, Link } from "react-router-dom";
 import styled from "styled-components";
-import { motion } from "framer-motion";
+import { m, domAnimation, LazyMotion } from "framer-motion";
 
 const Nav = () => {
   const { pathname } = useLocation();
@@ -13,30 +13,32 @@ const Nav = () => {
         </Link>
       </h1>
       <ul>
-        <li>
-          <Link to="/">1. About</Link>
-          <Line
-            transition={{ duration: 0.75 }}
-            initial={{ width: "0%" }}
-            animate={{ width: pathname === "/" ? "50%" : "0%" }}
-          />
-        </li>
-        <li>
-          <Link to="/work">2. My Work</Link>
-          <Line
-            transition={{ duration: 0.75 }}
-            initial={{ width: "0%" }}
-            animate={{ width: pathname === "/work" ? "50%" : "0%" }}
-          />
-        </li>
-        <li>
-          <Link to="/contact">3. Contact Me</Link>
-          <Line
-            transition={{ duration: 0.75 }}
-            initial={{ width: "0%" }}
-            animate={{ width: pathname === "/contact" ? "50%" : "0%" }}
-          />
-        </li>
+        <LazyMotion features={domAnimation} strict>
+          <li>
+            <Link to="/">1. About</Link>
+            <Line
+              transition={{ duration: 0.75 }}
+              initial={{ width: "0%" }}
+              animate={{ width: pathname === "/" ? "50%" : "0%" }}
+            />
+          </li>
+          <li>
+            <Link to="/work">2. My Work</Link>
+            <Line
+              transition={{ duration: 0.75 }}
+              initial={{ width: "0%" }}
+              animate={{ width: pathname === "/work" ? "50%" : "0%" }}
+            />
+          </li>
+          <li>
+            <Link to="/contact">3. Contact Me</Link>
+            <Line
+              transition={{ duration: 0.75 }}
+              initial={{ width: "0%" }}
+              animate={{ width: pathname === "/contact" ? "50%" : "0%" }}
+            />
+          </li>
+        </LazyMotion>
       </ul>
     </StyledNav>
   );
@@ -88,7 +90,7 @@ const StyledNav = styled.nav`
   }
 `;
 
-const Line = styled(motion.div)`
+const Line = styled(m.div)`
   height: 0.3rem;
   background: #23d997;
   width: 0%;
