@@ -12,7 +12,7 @@ import styled from "styled-components";
 import Wave from "./Wave";
 import { Section, Description, Hide } from "../styles";
 // Animations
-import { motion } from "framer-motion";
+import { LazyMotion, m, domAnimation } from "framer-motion";
 import { titleAnim, fade } from "../animation";
 
 const AboutSection = () => {
@@ -27,37 +27,40 @@ const AboutSection = () => {
           justifyContent: "space-around",
         }}
       >
-        <AboutTitle className="title">
-          <Hide>
-            <motion.h2 variants={titleAnim}>Hi! I'm</motion.h2>
-          </Hide>
-          <Hide>
-            <motion.h2 variants={titleAnim}>
-              <span>Elyse.</span>
-            </motion.h2>
-          </Hide>
-          <AboutDescription>
-            <p>
-              My goal is to deliver business value while leveling up my skills
-              as a developer. I'm particularly interested in the software
-              lifecycle and writing resilient code.
+        <LazyMotion features={domAnimation} strict>
+          <AboutTitle className="title">
+            <Hide>
+              <m.h2 variants={titleAnim}>Hi! I'm</m.h2>
+            </Hide>
+            <Hide>
+              <m.h2 variants={titleAnim}>
+                <span>Elyse.</span>
+              </m.h2>
+            </Hide>
+            <AboutDescription>
+              <p>
+                My goal is to deliver business value while leveling up my skills
+                as a developer. I'm particularly interested in the software
+                lifecycle and writing resilient code.
+              </p>
+              <Link to="/contact">Contact</Link>
+            </AboutDescription>
+          </AboutTitle>
+          <Avatar variants={fade} initial="hidden" animate="show">
+            <img src={me} alt="Elyse Turpin, Full Stack Developer" />
+            <p>Full Stack Developer</p>
+            <p style={{ padding: "0" }}>
+              <FontAwesomeIcon icon={faLocationDot}></FontAwesomeIcon>Montreal,
+              QC
             </p>
-            <Link to="/contact">Contact</Link>
-          </AboutDescription>
-        </AboutTitle>
-        <Avatar variants={fade} initial="hidden" animate="show">
-          <img src={me} alt="Elyse Turpin, Full Stack Developer" />
-          <p>Full Stack Developer</p>
-          <p style={{ padding: "0" }}>
-            <FontAwesomeIcon icon={faLocationDot}></FontAwesomeIcon>Montreal, QC
-          </p>
-        </Avatar>
+          </Avatar>
+        </LazyMotion>
       </div>
     </Section>
   );
 };
 
-const Avatar = styled(motion.div)`
+const Avatar = styled(m.div)`
   position: absolute;
   top: 0%;
   right: 0%;
@@ -123,7 +126,7 @@ const AboutDescription = styled(Description)`
   }
 `;
 
-const AboutTitle = styled(motion.div)`
+const AboutTitle = styled(m.div)`
   text-align: left;
   line-height: 6rem;
   @media (max-width: 900px) {
