@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { motion } from "framer-motion";
 
 export const Button = styled.a`
   padding: 1rem;
@@ -76,17 +75,6 @@ export const Description = styled.div`
 
 export const Hide = styled.div`
   overflow: hidden;
-`;
-
-export const Image = styled(motion.div)`
-  flex: 1;
-  overflow: hidden;
-  z-index: 2;
-  img {
-    width: 100%;
-    height: 90vh;
-    object-fit: cover;
-  }
 `;
 
 export const Section = styled.div`

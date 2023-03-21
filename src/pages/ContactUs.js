@@ -2,7 +2,7 @@ import React from "react";
 //Styles
 import styled from "styled-components";
 // Animations
-import { motion } from "framer-motion";
+import { m, domAnimation, LazyMotion } from "framer-motion";
 import { pageAnim, titleAnim, lineAnim, fade } from "../animation";
 // Icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -20,67 +20,73 @@ const Contact = () => {
   };
 
   return (
-    <StyledContact
-      variants={pageAnim}
-      initial="hidden"
-      animate="show"
-      exit="exit"
-      style={{ background: "#fff" }}
-    >
-      <Title>
-        <motion.h2 variants={fade} initial="hidden" animate="show">
-          Get In Touch
-        </motion.h2>
-        <motion.div
-          variants={lineAnim}
-          initial="hidden"
-          animate="show"
-          transition={{ delay: 0 }}
-          className="line"
-        ></motion.div>
-      </Title>
-      <Hide>
-        <Social
-          variants={titleAnim}
-          animate={{ transition: { duration: 0.15 } }}
-          onClick={() => copyToClipboardHandler()}
-        >
-          <FontAwesomeIcon icon={faEnvelope} />
-          <h4>Send Me An Email</h4>
-          <Tooltip id="tooltip">copied!</Tooltip>
-        </Social>
-      </Hide>
-      <Hide>
-        <Social
-          variants={titleAnim}
-          animate={{ transition: { duration: 0.15 } }}
-        >
-          <a
-            target="_blank"
-            rel="noreferrer"
-            href="https://www.linkedin.com/in/elyse-turpin/"
+    <LazyMotion features={domAnimation} strict>
+      <StyledContact
+        variants={pageAnim}
+        initial="hidden"
+        animate="show"
+        exit="exit"
+        style={{ background: "#fff" }}
+      >
+        <Title>
+          <m.h2 variants={fade} initial="hidden" animate="show">
+            Get In Touch
+          </m.h2>
+          <m.div
+            variants={lineAnim}
+            initial="hidden"
+            animate="show"
+            transition={{ delay: 0 }}
+            className="line"
+          ></m.div>
+        </Title>
+        <Hide>
+          <Social
+            variants={titleAnim}
+            animate={{ transition: { duration: 0.15 } }}
+            onClick={() => copyToClipboardHandler()}
           >
-            <FontAwesomeIcon icon={["fab", "linkedin"]} />
-          </a>
-          <h4>Connect on LinkedIn</h4>
-        </Social>
-      </Hide>
-      <Hide>
-        <Social
-          variants={titleAnim}
-          animate={{ transition: { duration: 0.15 } }}
-        >
-          <a target="_blank" rel="noreferrer" href="https://github.com/evvrit">
-            <FontAwesomeIcon icon={["fab", "github"]} />
-          </a>
-          <h4>Follow Along on Github</h4>
-        </Social>
-      </Hide>
-    </StyledContact>
+            <FontAwesomeIcon icon={faEnvelope} />
+            <h4>Send Me An Email</h4>
+            <Tooltip id="tooltip">copied!</Tooltip>
+          </Social>
+        </Hide>
+        <Hide>
+          <Social
+            variants={titleAnim}
+            animate={{ transition: { duration: 0.15 } }}
+          >
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://www.linkedin.com/in/elyse-turpin/"
+            >
+              <FontAwesomeIcon icon={["fab", "linkedin"]} />
+            </a>
+            <h4>Connect on LinkedIn</h4>
+          </Social>
+        </Hide>
+        <Hide>
+          <Social
+            variants={titleAnim}
+            animate={{ transition: { duration: 0.15 } }}
+          >
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://github.com/evvrit"
+            >
+              <FontAwesomeIcon icon={["fab", "github"]} />
+            </a>
+            <h4>Follow Along on Github</h4>
+          </Social>
+        </Hide>
+      </StyledContact>
+    </LazyMotion>
   );
 };
 
-const StyledContact = styled(motion.div)`
+const StyledContact = styled(m.div)`
   padding: 5rem 10rem;
   color: #353535;
   min-height: 90vh;
@@ -89,7 +95,7 @@ const StyledContact = styled(motion.div)`
   }
 `;
 
-const Title = styled(motion.div)`
+const Title = styled(m.div)`
   h2 {
     padding: 1rem 0rem;
   }
@@ -111,7 +117,7 @@ const Hide = styled.div`
   overflow: hidden;
 `;
 
-const Social = styled(motion.div)`
+const Social = styled(m.div)`
   display: flex;
   align-items: center;
   width: 100%;
@@ -136,7 +142,7 @@ const Social = styled(motion.div)`
   }
 `;
 
-const Tooltip = styled(motion.div)`
+const Tooltip = styled(m.div)`
   font-size: 1.3rem;
   transition: all 0.1s ease-out;
   color: #353535;
