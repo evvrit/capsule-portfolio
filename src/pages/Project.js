@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { useLocation } from "react-router-dom";
 import { projectState } from "../projectState";
 // Animations
-import { motion } from "framer-motion";
+import { domAnimation, m, LazyMotion } from "framer-motion";
 import { pageAnim, fade } from "../animation";
 import StackSection from "../components/StackSection";
 import UseScroll from "../components/useScroll";
@@ -26,59 +26,61 @@ const Project = () => {
   return (
     <>
       {project && (
-        <StyledProject
-          variants={pageAnim}
-          initial="hidden"
-          animate="show"
-          exit="exit"
-        >
-          <Banner variants={fade} initial="hidden" animate="show">
-            <h2>{project.title}</h2>
-            <a
-              style={{ cursor: "default" }}
-              target="_blank"
-              rel="noreferrer"
-              href={project.siteLink}
-            >
-              {project.mainImg && (
-                <img src={project.mainImg} alt={project.mainImgAlt} />
-              )}
-            </a>
-          </Banner>
-          <Buttons>
-            <a target="_blank" rel="noreferrer" href={project.siteLink}>
-              View live project
-            </a>
-            {project.repoLink && (
-              <a target="_blank" rel="noreferrer" href={project.repoLink}>
-                Visit repository
+        <LazyMotion features={domAnimation} strict>
+          <StyledProject
+            variants={pageAnim}
+            initial="hidden"
+            animate="show"
+            exit="exit"
+          >
+            <Banner variants={fade} initial="hidden" animate="show">
+              <h2>{project.title}</h2>
+              <a
+                style={{ cursor: "default" }}
+                target="_blank"
+                rel="noreferrer"
+                href={project.siteLink}
+              >
+                {project.mainImg && (
+                  <img src={project.mainImg} alt={project.mainImgAlt} />
+                )}
               </a>
-            )}
-          </Buttons>
-          <StackSection
-            technologies={project.technologies}
-            railsInclude={project.railsInclude}
-            herokuInclude={project.herokuInclude}
-          />
-          <UseScroll>
-            <Details>
-              {project.details.map((detail) => (
-                <Detail
-                  title={detail.title}
-                  description={detail.description}
-                  key={detail.title}
-                />
-              ))}
-            </Details>
-          </UseScroll>
-        </StyledProject>
+            </Banner>
+            <Buttons>
+              <a target="_blank" rel="noreferrer" href={project.siteLink}>
+                View live project
+              </a>
+              {project.repoLink && (
+                <a target="_blank" rel="noreferrer" href={project.repoLink}>
+                  Visit repository
+                </a>
+              )}
+            </Buttons>
+            <StackSection
+              technologies={project.technologies}
+              railsInclude={project.railsInclude}
+              herokuInclude={project.herokuInclude}
+            />
+            <UseScroll>
+              <Details>
+                {project.details.map((detail) => (
+                  <Detail
+                    title={detail.title}
+                    description={detail.description}
+                    key={detail.title}
+                  />
+                ))}
+              </Details>
+            </UseScroll>
+          </StyledProject>
+        </LazyMotion>
       )}
       ;
     </>
   );
 };
 
-const StyledProject = styled(motion.div)`
+const StyledProject = styled(m.div)`
   color: white;
   margin: 5rem 10rem;
   @media (max-width: 1300px) {
@@ -89,7 +91,7 @@ const StyledProject = styled(motion.div)`
   }
 `;
 
-const Banner = styled(motion.div)`
+const Banner = styled(m.div)`
   min-height: 30vh;
   padding-top: 0vh;
   position: relative;

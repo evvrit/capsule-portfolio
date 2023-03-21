@@ -6,70 +6,72 @@ import foragr from "../images/foragr.jpg";
 import waves3 from "../images/waves3.png";
 import melisande1 from "../images/melisande1.png";
 // Animations
-import { motion } from "framer-motion";
+import { m, LazyMotion, domAnimation } from "framer-motion";
 import { pageAnim, lineAnim } from "../animation";
 import UseScroll from "../components/useScroll";
 
 const OurWork = () => {
   return (
-    <Work variants={pageAnim} initial="hidden" animate="show" exit="exit">
-      <h1>Projects</h1>
-      <UseScroll>
-        {waves3 && (
-          <Project>
-            <h2>Waves</h2>
-            <motion.div
-              variants={lineAnim}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true }}
-              className="line"
-            ></motion.div>
-            <Link to="/work/waves">
-              <img src={waves3} alt="waves screenshot" />
-            </Link>
-          </Project>
-        )}
-      </UseScroll>
-      <UseScroll>
-        {foragr && (
-          <Project>
-            <h2>Foragr</h2>
-            <motion.div
-              variants={lineAnim}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true }}
-              className="line"
-            ></motion.div>
-            <Link to="/work/foragr">
-              <img src={foragr} alt="foragr homepage" />
-            </Link>
-          </Project>
-        )}
-      </UseScroll>
-      <UseScroll>
-        {melisande1 && (
-          <Project>
-            <h2>Melisande Yoga</h2>
-            <motion.div
-              variants={lineAnim}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true }}
-              className="line"
-            ></motion.div>
-            <Link to="/work/melisandeyoga">
-              <img src={melisande1} alt="melisande yoga" />
-            </Link>
-          </Project>
-        )}
-      </UseScroll>
-    </Work>
+    <LazyMotion features={domAnimation} strict>
+      <Work variants={pageAnim} initial="hidden" animate="show" exit="exit">
+        <h1>Projects</h1>
+        <UseScroll>
+          {waves3 && (
+            <Project>
+              <h2>Waves</h2>
+              <m.div
+                variants={lineAnim}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true }}
+                className="line"
+              ></m.div>
+              <Link to="/work/waves">
+                <img src={waves3} alt="waves screenshot" />
+              </Link>
+            </Project>
+          )}
+        </UseScroll>
+        <UseScroll>
+          {foragr && (
+            <Project>
+              <h2>Foragr</h2>
+              <m.div
+                variants={lineAnim}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true }}
+                className="line"
+              ></m.div>
+              <Link to="/work/foragr">
+                <img src={foragr} alt="foragr homepage" />
+              </Link>
+            </Project>
+          )}
+        </UseScroll>
+        <UseScroll>
+          {melisande1 && (
+            <Project>
+              <h2>Melisande Yoga</h2>
+              <m.div
+                variants={lineAnim}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true }}
+                className="line"
+              ></m.div>
+              <Link to="/work/melisandeyoga">
+                <img src={melisande1} alt="melisande yoga" />
+              </Link>
+            </Project>
+          )}
+        </UseScroll>
+      </Work>
+    </LazyMotion>
   );
 };
 
-const Work = styled(motion.div)`
+const Work = styled(m.div)`
   min-height: 100vh;
   overflow: hidden;
   padding: 5rem 10rem;
@@ -83,7 +85,7 @@ const Work = styled(motion.div)`
   }
 `;
 
-const Project = styled(motion.div)`
+const Project = styled(m.div)`
   padding-bottom: 15rem;
   .line {
     height: 0.5rem;
