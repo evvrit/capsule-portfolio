@@ -4,7 +4,7 @@ import AboutSection from "../components/AboutSection";
 import StackSection from "../components/StackSection";
 import MoreSection from "../components/MoreSection";
 // Animations
-import { motion } from "framer-motion";
+import { domAnimation, m, LazyMotion } from "framer-motion";
 import { pageAnim } from "../animation";
 
 const AboutUs = () => {
@@ -21,15 +21,17 @@ const AboutUs = () => {
   ];
 
   return (
-    <motion.div variants={pageAnim} initial="hidden" animate="show">
-      <AboutSection />
-      <StackSection
-        technologies={technologies}
-        railsInclude={true}
-        herokuInclude={true}
-      />
-      <MoreSection />
-    </motion.div>
+    <LazyMotion features={domAnimation} strict>
+      <m.div variants={pageAnim} initial="hidden" animate="show">
+        <AboutSection />
+        <StackSection
+          technologies={technologies}
+          railsInclude={true}
+          herokuInclude={true}
+        />
+        <MoreSection />
+      </m.div>
+    </LazyMotion>
   );
 };
 
