@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { Section, Button } from "../styles";
 import Toggle from "./Toggle";
 // Animations
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import UseScroll from "./useScroll";
 import { fade } from "../animation";
 
@@ -17,7 +17,7 @@ const MoreSection = () => {
         </h2>
         <Toggle title="My CV">
           <div className="answer">
-            <motion.div variants={fade} style={{ marginTop: "2rem" }}>
+            <m.div variants={fade} style={{ marginTop: "2rem" }}>
               <Button
                 href="https://drive.google.com/file/d/1PNSuXYQiDNkRkgfR_mVX3A_g5mk7oy_H/view?usp=sharing"
                 target="_blank"
@@ -32,18 +32,18 @@ const MoreSection = () => {
               >
                 Français
               </Button>
-            </motion.div>
+            </m.div>
           </div>
         </Toggle>
         <Toggle title="Currently working on">
           <div className="answer">
-            <motion.p variants={fade}>
+            <m.p variants={fade}>
               Building a study tracker for better long-term recall
               <span style={{ visibility: "hidden" }}>
                 Reps: timing is everything
               </span>
-            </motion.p>
-            <motion.p variants={fade}>
+            </m.p>
+            <m.p variants={fade}>
               Mastering CS logic
               <a
                 target="_blank"
@@ -54,8 +54,8 @@ const MoreSection = () => {
                   Harvard CS50x CS Fundamentals
                 </span>
               </a>
-            </motion.p>
-            <motion.p variants={fade}>
+            </m.p>
+            <m.p variants={fade}>
               Getting to know the library that shook front-end
               <a
                 target="_blank"
@@ -66,7 +66,7 @@ const MoreSection = () => {
                   DevEd's Creative React & Redux course
                 </span>
               </a>
-            </motion.p>
+            </m.p>
           </div>
         </Toggle>
       </More>

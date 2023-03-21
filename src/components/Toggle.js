@@ -1,14 +1,16 @@
 import React, { useState } from "react";
-import { motion } from "framer-motion";
+import { m, LazyMotion, domMax } from "framer-motion";
 
 const Toggle = ({ children, title }) => {
   const [toggle, setToggle] = useState(false);
   return (
-    <motion.div layout className="question" onClick={() => setToggle(!toggle)}>
-      <motion.h4 layout>{title}</motion.h4>
-      {toggle ? children : ""}
-      <div className="bookend-line"></div>
-    </motion.div>
+    <LazyMotion features={domMax} strict>
+      <m.div layout className="question" onClick={() => setToggle(!toggle)}>
+        <m.h4 layout>{title}</m.h4>
+        {toggle ? children : ""}
+        <div className="bookend-line"></div>
+      </m.div>
+    </LazyMotion>
   );
 };
 
