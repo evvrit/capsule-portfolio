@@ -1,12 +1,5 @@
 // Lazy load
 import React, { lazy, Suspense } from "react";
-//Pages
-const AboutUs = lazy(() => import("./pages/AboutUs"));
-const Contact = lazy(() => import("./pages/ContactUs"));
-const OurWork = lazy(() => import("./pages/MyWork"));
-const Project = lazy(() => import("./pages/Project"));
-import GlobalStyle from "./components/GlobalStyle";
-import Nav from "./components/Nav";
 // Router
 import { Routes, Route, useLocation } from "react-router-dom";
 // Animations
@@ -14,6 +7,13 @@ import { AnimatePresence } from "framer-motion";
 // Icons
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
+//Pages
+import GlobalStyle from "./components/GlobalStyle";
+import Nav from "./components/Nav";
+const AboutUs = lazy(() => import("./pages/AboutUs"));
+const Contact = lazy(() => import("./pages/ContactUs"));
+const OurWork = lazy(() => import("./pages/MyWork"));
+const Project = lazy(() => import("./pages/Project"));
 
 function App() {
   // icons library
