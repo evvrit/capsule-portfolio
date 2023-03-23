@@ -5,7 +5,7 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 
 const root = hydrateRoot(document.getElementById("root"));
-root.render(
+root.hydrate(
   <React.StrictMode>
     <BrowserRouter>
       <App />
