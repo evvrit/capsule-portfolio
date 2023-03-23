@@ -15,6 +15,7 @@ import { faHtml5 } from "@fortawesome/free-brands-svg-icons/faHtml5";
 import { faFigma } from "@fortawesome/free-brands-svg-icons/faFigma";
 import { faWordpress } from "@fortawesome/free-brands-svg-icons/faWordpress";
 import { faElementor } from "@fortawesome/free-brands-svg-icons/faElementor";
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons/faLinkedin";
 //Pages
 import GlobalStyle from "./components/GlobalStyle";
 import Nav from "./components/Nav";
@@ -33,7 +34,8 @@ function App() {
     faHtml5,
     faFigma,
     faWordpress,
-    faElementor
+    faElementor,
+    faLinkedin
   );
   // routing
   const location = useLocation();
