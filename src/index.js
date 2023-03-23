@@ -1,10 +1,10 @@
 import React from "react";
-import ReactDOM from "react-dom/server";
+import { hydrateRoot } from "react-dom/client";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const root = hydrateRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
