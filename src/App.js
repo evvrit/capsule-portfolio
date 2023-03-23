@@ -4,9 +4,7 @@ import React, { lazy, Suspense } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 // Animations
 import { AnimatePresence } from "framer-motion";
-// Icons
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { fab } from "@fortawesome/free-brands-svg-icons";
+
 //Pages
 import GlobalStyle from "./components/GlobalStyle";
 import Nav from "./components/Nav";
@@ -16,9 +14,6 @@ const OurWork = lazy(() => import("./pages/MyWork"));
 const Project = lazy(() => import("./pages/Project"));
 
 function App() {
-  // icons library
-  library.add(fab);
-
   // routing
   const location = useLocation();
   return (

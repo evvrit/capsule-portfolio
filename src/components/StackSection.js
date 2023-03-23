@@ -1,5 +1,8 @@
 import React from "react";
 import TechnologyCard from "./TechnologyCard";
+// Icons
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fab } from "@fortawesome/free-brands-svg-icons";
 // SVGs
 import heroku from "../images/heroku.svg";
 import rails from "../images/rails.svg";
@@ -10,6 +13,9 @@ import { Section, Description, Card } from "../styles";
 import UseScroll from "./useScroll";
 
 const StackSection = ({ technologies, railsInclude, herokuInclude }) => {
+  // icons library
+  library.add(fab);
+
   return (
     <UseScroll>
       <TechStack>
