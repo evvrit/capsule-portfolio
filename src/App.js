@@ -4,7 +4,17 @@ import React, { lazy, Suspense } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 // Animations
 import { AnimatePresence } from "framer-motion";
-
+// icons
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faReact } from "@fortawesome/free-brands-svg-icons/faReact";
+import { faGit } from "@fortawesome/free-brands-svg-icons/faGit";
+import { faSass } from "@fortawesome/free-brands-svg-icons/faSass";
+import { faJs } from "@fortawesome/free-brands-svg-icons/faJs";
+import { faGithub } from "@fortawesome/free-brands-svg-icons/faGithub";
+import { faHtml5 } from "@fortawesome/free-brands-svg-icons/faHtml5";
+import { faFigma } from "@fortawesome/free-brands-svg-icons/faFigma";
+import { faWordpress } from "@fortawesome/free-brands-svg-icons/faWordpress";
+import { faElementor } from "@fortawesome/free-brands-svg-icons/faElementor";
 //Pages
 import GlobalStyle from "./components/GlobalStyle";
 import Nav from "./components/Nav";
@@ -14,6 +24,17 @@ const OurWork = lazy(() => import("./pages/MyWork"));
 const Project = lazy(() => import("./pages/Project"));
 
 function App() {
+  library.add(
+    faReact,
+    faGit,
+    faSass,
+    faJs,
+    faGithub,
+    faHtml5,
+    faFigma,
+    faWordpress,
+    faElementor
+  );
   // routing
   const location = useLocation();
   return (
