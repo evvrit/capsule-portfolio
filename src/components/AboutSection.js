@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import me from "../images/elyse.jpg";
 // Icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
+import { faLocationDot } from "@fortawesome/free-solid-svg-icons/faLocationDot";
 // Styles
 import styled from "styled-components";
 // Components

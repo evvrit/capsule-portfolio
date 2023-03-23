@@ -6,7 +6,7 @@ import { m, domAnimation, LazyMotion } from "framer-motion";
 import { pageAnim, titleAnim, lineAnim, fade } from "../animation";
 // Icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons/faEnvelope";
 
 const Contact = () => {
   const copyToClipboardHandler = () => {
