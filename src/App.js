@@ -1,5 +1,5 @@
 // Lazy load
-import React, { lazy, Suspense } from "react";
+import React from "react";
 // Router
 import { Routes, Route, useLocation } from "react-router-dom";
 // Animations
@@ -35,7 +35,8 @@ function App() {
     faFigma,
     faWordpress,
     faElementor,
-    faLinkedin
+    faLinkedin,
+    faPython
   );
   // routing
   const location = useLocation();
