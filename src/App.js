@@ -1,5 +1,5 @@
 // Lazy load
-import React from "react";
+import React, { lazy, Suspense } from "react";
 // Router
 import { Routes, Route, useLocation } from "react-router-dom";
 // Animations
@@ -13,6 +13,7 @@ import { faJs } from "@fortawesome/free-brands-svg-icons/faJs";
 import { faGithub } from "@fortawesome/free-brands-svg-icons/faGithub";
 import { faHtml5 } from "@fortawesome/free-brands-svg-icons/faHtml5";
 import { faFigma } from "@fortawesome/free-brands-svg-icons/faFigma";
+import { faPython } from "@fortawesome/free-brands-svg-icons/faPython";
 import { faWordpress } from "@fortawesome/free-brands-svg-icons/faWordpress";
 import { faElementor } from "@fortawesome/free-brands-svg-icons/faElementor";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons/faLinkedin";
