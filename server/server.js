@@ -8,7 +8,7 @@ import App from "../src/App";
 
 const app = express();
 
-app.use("^/$", (req, res) => {
+app.use("*", (req, res) => {
   fs.readFile(path.resolve("./build/index.html"), "utf-8", (err, data) => {
     if (err) {
       console.log(err);
