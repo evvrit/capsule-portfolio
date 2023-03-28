@@ -11,7 +11,7 @@ const allApp = (
     </BrowserRouter>
   </React.StrictMode>
 );
-hydrateRoot(document.getElementById("root"), allApp);
+hydrateRoot(document, allApp);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
