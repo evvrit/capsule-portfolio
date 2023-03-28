@@ -27,7 +27,7 @@ app.use("^/$", (req, res) => {
   });
 });
 
-app.use(express.static(path.resolve(__dirname, "..", "build/static/media")));
+app.use(express.static(path.join(__dirname, "..", "build")));
 
 app.listen(process.env.PORT, () => {
   console.log("App is launched");
