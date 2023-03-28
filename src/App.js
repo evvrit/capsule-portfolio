@@ -1,7 +1,7 @@
 // Lazy load
 import React, { lazy, Suspense } from "react";
 // Router
-import { Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route, useLocation, BrowserRouter } from "react-router-dom";
 // Animations
 import { AnimatePresence } from "framer-motion";
 // icons
@@ -42,23 +42,27 @@ function App() {
   // routing
   const location = useLocation();
   return (
-    <div className="App">
-      <GlobalStyle />
-      <Nav />
-      <Suspense fallback={null}>
-        <AnimatePresence
-          mode="wait"
-          onExitComplete={() => window.scrollTo(0, 0)}
-        >
-          <Routes key={location.pathname} location={location}>
-            <Route exact path="/" element={<AboutUs />} />
-            <Route exact path="/work" element={<OurWork />} />
-            <Route exact path="/work/:id" element={<Project />} />
-            <Route exact path="/contact" element={<Contact />} />
-          </Routes>
-        </AnimatePresence>
-      </Suspense>
-    </div>
+    <React.StrictMode>
+      <BrowserRouter>
+        <div className="App">
+          <GlobalStyle />
+          <Nav />
+          <Suspense fallback={null}>
+            <AnimatePresence
+              mode="wait"
+              onExitComplete={() => window.scrollTo(0, 0)}
+            >
+              <Routes key={location.pathname} location={location}>
+                <Route exact path="/" element={<AboutUs />} />
+                <Route exact path="/work" element={<OurWork />} />
+                <Route exact path="/work/:id" element={<Project />} />
+                <Route exact path="/contact" element={<Contact />} />
+              </Routes>
+            </AnimatePresence>
+          </Suspense>
+        </div>
+      </BrowserRouter>
+    </React.StrictMode>
   );
 }
 
