@@ -1,13 +1,13 @@
 import React from "react";
 import { hydrateRoot } from "react-dom/client";
+import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
-import Routes from "./components/Routes";
 
 const allApp = (
   <React.StrictMode>
     <BrowserRouter>
-      <Routes />
+      <App />
     </BrowserRouter>
   </React.StrictMode>
 );
