@@ -91,7 +91,7 @@ app.use("/work/:id", (req, res) => {
 
 app.use(express.static(path.resolve(__dirname, "..", "build")));
 
-app.listen(3005, () => {
+app.listen(process.env.PORT, () => {
   console.log(`App is launched on PORT ${PORT}`);
   console.log(__dirname);
 });
