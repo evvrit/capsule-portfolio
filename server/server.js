@@ -12,7 +12,7 @@ app.use("/", (req, res) => {
   fs.readFile(path.resolve("./build/index.html"), "utf-8", (err, data) => {
     if (err) {
       console.log(err);
-      return res.errored(500).send("Some error happened");
+      return res.status(500).send("Some error happened");
     }
 
     const html = renderToString(
@@ -29,6 +29,6 @@ app.use("/", (req, res) => {
 
 app.use(express.static(path.resolve(__dirname, "..", "build")));
 
-app.listen(process.env.PORT, () => {
+app.listen(3005, () => {
   console.log("App is launched");
 });
