@@ -1,5 +1,5 @@
 // Lazy load
-import React, { lazy, Suspense } from "react";
+import React from "react";
 // Router
 import { Routes, Route, useLocation } from "react-router-dom";
 // Animations
@@ -20,10 +20,10 @@ import { faLinkedin } from "@fortawesome/free-brands-svg-icons/faLinkedin";
 //Pages
 import GlobalStyle from "./components/GlobalStyle";
 import Nav from "./components/Nav";
-const AboutUs = lazy(() => import("./pages/AboutUs"));
-const Contact = lazy(() => import("./pages/ContactUs"));
-const OurWork = lazy(() => import("./pages/MyWork"));
-const Project = lazy(() => import("./pages/Project"));
+import AboutUs from "./pages/AboutUs";
+import Contact from "./pages/ContactUs";
+import OurWork from "./pages/MyWork";
+import Project from "./pages/Project";
 
 function App() {
   library.add(
@@ -45,19 +45,14 @@ function App() {
     <div className="App">
       <GlobalStyle />
       <Nav />
-      <Suspense fallback={null}>
-        <AnimatePresence
-          mode="wait"
-          onExitComplete={() => window.scrollTo(0, 0)}
-        >
-          <Routes key={location.pathname} location={location}>
-            <Route exact path="/" element={<AboutUs />} />
-            <Route exact path="/work" element={<OurWork />} />
-            <Route exact path="/work/:id" element={<Project />} />
-            <Route exact path="/contact" element={<Contact />} />
-          </Routes>
-        </AnimatePresence>
-      </Suspense>
+      <AnimatePresence mode="wait" onExitComplete={() => window.scrollTo(0, 0)}>
+        <Routes key={location.pathname} location={location}>
+          <Route exact path="/" element={<AboutUs />} />
+          <Route exact path="/work" element={<OurWork />} />
+          <Route exact path="/work/:id" element={<Project />} />
+          <Route exact path="/contact" element={<Contact />} />
+        </Routes>
+      </AnimatePresence>
     </div>
   );
 }
