@@ -4,7 +4,7 @@ import path from "path";
 import React from "react";
 import { renderToString } from "react-dom/server";
 import { StaticRouter } from "react-router-dom/server";
-import App from "../src/App";
+import Home from "../src/pages/AboutUs";
 
 const app = express();
 const PORT = process.env.PORT || 3005;
@@ -18,7 +18,7 @@ app.use("^/$", (req, res) => {
 
     const html = renderToString(
       <StaticRouter location={req.url}>
-        <App />
+        <Home />
       </StaticRouter>
     );
 
