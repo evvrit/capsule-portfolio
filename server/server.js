@@ -50,6 +50,7 @@ app.use("/work/", (req, res) => {
     );
   });
 });
+
 app.use("/contact/", (req, res) => {
   fs.readFile(path.resolve("./build/index.html"), "utf-8", (err, data) => {
     if (err) {
@@ -68,6 +69,7 @@ app.use("/contact/", (req, res) => {
     );
   });
 });
+
 app.use("/work/:id", (req, res) => {
   fs.readFile(path.resolve("./build/index.html"), "utf-8", (err, data) => {
     if (err) {
