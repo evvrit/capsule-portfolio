@@ -7,7 +7,6 @@ import { StaticRouter } from "react-router-dom/server";
 import App from "../src/App";
 
 const app = express();
-const routes = require("..src/routes");
 
 app.use("/", (req, res) => {
   fs.readFile(path.resolve("./build/index.html"), "utf-8", (err, data) => {
@@ -28,9 +27,9 @@ app.use("/", (req, res) => {
   });
 });
 
-app.use("^/$", routes);
-
-app.use(express.static(path.join(__dirname, "..", "build")));
+app.use(
+  express.static(path.resolve(__dirname, "..", "build", "static", "media"))
+);
 
 app.listen(process.env.PORT, () => {
   console.log("App is launched");
