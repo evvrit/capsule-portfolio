@@ -1,4 +1,3 @@
-// Lazy load
 import React from "react";
 // Router
 import { Routes, Route, useLocation } from "react-router-dom";
@@ -26,6 +25,7 @@ import OurWork from "./pages/MyWork";
 import Project from "./pages/Project";
 
 function App() {
+  // icons
   library.add(
     faReact,
     faGit,
