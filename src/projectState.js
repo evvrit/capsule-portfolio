@@ -1,9 +1,9 @@
-import foragrcollage1 from "./images/foragrcollage1.png";
-import foragrcollage2 from "./images/foragr-collage2.jpg";
-import waves1 from "./images/waves1.png";
-import wavescollage from "./images/waves-collage.png";
-import melisande1 from "./images/melisande1.png";
-import melisande2 from "./images/melisande2.png";
+import foragrcollage1 from "./images/foragrcollage1.webp";
+import foragrcollage2 from "./images/foragr-collage2.webp";
+import waves1 from "./images/waves1.webp";
+import wavescollage from "./images/waves-collage.webp";
+import melisande1 from "./images/melisande1.webp";
+import melisande2 from "./images/melisande2.webp";
 
 export const projectState = () => {
   return [

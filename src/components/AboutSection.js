@@ -2,7 +2,7 @@ import React from "react";
 // Link
 import { Link } from "react-router-dom";
 // Images
-import me from "../images/elyse.jpg";
+import me from "../images/elyse.webp";
 // Icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons/faLocationDot";

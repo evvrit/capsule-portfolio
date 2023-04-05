@@ -2,9 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 // Images
-import foragr from "../images/foragr.jpg";
-import waves3 from "../images/waves3.png";
-import melisande1 from "../images/melisande1.png";
+import foragr from "../images/foragr.webp";
+import waves3 from "../images/waves3.webp";
+import melisande1 from "../images/melisande1.webp";
 // Animations
 import { m, LazyMotion, domAnimation } from "framer-motion";
 import { pageAnim, lineAnim } from "../animation";
