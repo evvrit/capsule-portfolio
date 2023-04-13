@@ -47,7 +47,9 @@ const AboutSection = () => {
             </AboutDescription>
           </AboutTitle>
           <Avatar variants={fade} initial="hidden" animate="show">
-            <img src={me} alt="Elyse Turpin, Full Stack Developer" />
+            <picture>
+              <source srcset="../images/elyse.webp" type="image/webp" alt="Elyse Turpin, Full Stack Developer" />
+            </picture>
             <p>Full Stack Developer</p>
             <p style={{ padding: "0" }}>
               <FontAwesomeIcon icon={faLocationDot}></FontAwesomeIcon>Montreal,

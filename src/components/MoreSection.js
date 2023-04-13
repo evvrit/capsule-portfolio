@@ -19,14 +19,14 @@ const MoreSection = () => {
           <div className="answer">
             <m.div variants={fade} style={{ marginTop: "2rem" }}>
               <Button
-                href="https://drive.google.com/file/d/1PNSuXYQiDNkRkgfR_mVX3A_g5mk7oy_H/view?usp=sharing"
+                href="https://drive.google.com/file/d/1fVaB_NgGmzmf3jgdSDTGoG7mc5EVRpIB/view?usp=sharing"
                 target="_blank"
                 rel="noreferrer"
               >
                 English
               </Button>
               <Button
-                href="https://drive.google.com/file/d/1rKkvF4BsEM5btNMLOBAAMaVCToMi3c1n/view?usp=sharing"
+                href="https://drive.google.com/file/d/11IzARWBx-iEKUos7fN3_Orz4YKqyKL1M/view?usp=sharing"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -42,18 +42,6 @@ const MoreSection = () => {
               <span style={{ visibility: "hidden" }}>
                 Reps: timing is everything
               </span>
-            </m.p>
-            <m.p variants={fade}>
-              Mastering CS logic
-              <a
-                target="_blank"
-                rel="noreferrer"
-                href="https://www.edx.org/course/introduction-computer-science-harvardx-cs50x"
-              >
-                <span style={{ cursor: "pointer" }}>
-                  Harvard CS50x CS Fundamentals
-                </span>
-              </a>
             </m.p>
             <m.p variants={fade}>
               Getting to know the library that shook front-end
