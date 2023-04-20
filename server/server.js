@@ -13,6 +13,8 @@ import Contact from "../src/pages/ContactUs";
 const app = express();
 const PORT = process.env.PORT || 3005;
 
+console.log('PORT', PORT);
+
 app.use("^/$", (req, res) => {
   fs.readFile(path.resolve("./build/index.html"), "utf-8", (err, data) => {
     if (err) {
