@@ -19,14 +19,14 @@ const MoreSection = () => {
           <div className="answer">
             <m.div variants={fade} style={{ marginTop: "2rem" }}>
               <Button
-                href="https://drive.google.com/file/d/1PNSuXYQiDNkRkgfR_mVX3A_g5mk7oy_H/view?usp=sharing"
+                href="https://drive.google.com/file/d/1fVaB_NgGmzmf3jgdSDTGoG7mc5EVRpIB/view?usp=share_link"
                 target="_blank"
                 rel="noreferrer"
               >
                 English
               </Button>
               <Button
-                href="https://drive.google.com/file/d/1rKkvF4BsEM5btNMLOBAAMaVCToMi3c1n/view?usp=sharing"
+                href="https://drive.google.com/file/d/11IzARWBx-iEKUos7fN3_Orz4YKqyKL1M/view?usp=share_link"
                 target="_blank"
                 rel="noreferrer"
               >
