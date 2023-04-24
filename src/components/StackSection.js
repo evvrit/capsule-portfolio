@@ -26,7 +26,7 @@ const StackSection = ({ technologies, railsInclude, herokuInclude }) => {
             {railsInclude ? (
               <Card>
                 <div className="icon">
-                  <img width="34" height="34" src={rails} alt="rails" />
+                  <img width="34" height="34" src={rails} alt="rails" ></img>
                   <h3>Rails</h3>
                 </div>
               </Card>
@@ -36,7 +36,7 @@ const StackSection = ({ technologies, railsInclude, herokuInclude }) => {
             {herokuInclude ? (
               <Card>
                 <div className="icon">
-                  <img width="34" height="34" src={heroku} alt="heroku" />
+                  <img width="34" height="34" src={heroku} alt="heroku" ></img>
                   <h3>Heroku</h3>
                 </div>
               </Card>
