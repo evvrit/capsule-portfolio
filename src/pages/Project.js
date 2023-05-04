@@ -47,9 +47,11 @@ const Project = () => {
               </a>
             </Banner>
             <Buttons>
-              <a target="_blank" rel="noreferrer" href={project.siteLink}>
-                View live project
-              </a>
+              {project.siteLink && (
+                <a target="_blank" rel="noreferrer" href={project.siteLink}>
+                  View live project
+                </a>
+              )}
               {project.repoLink && (
                 <a target="_blank" rel="noreferrer" href={project.repoLink}>
                   Visit repository

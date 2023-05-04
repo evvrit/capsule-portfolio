@@ -84,7 +84,6 @@ export const projectState = () => {
       secondaryImg: foragrcollage2,
       secondaryImgAlt:
         "mobile view series with landing page, profile, and species details",
-      siteLink: "https://forag-r.herokuapp.com/",
       repoLink: "https://github.com/evvrit/foragr",
       technologies: [
         { icon: ["fab", "git"], name: "Git" },
